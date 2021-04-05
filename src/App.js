@@ -1,4 +1,5 @@
 import React from "react";
+import { globalStyles } from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import "./index.css";
 
@@ -11,16 +12,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-
-const globalStyles = {
-  fontFamily: "",
-  fontSizeLg: "",
-  fontSizeMd: "",
-  fontSizeSm: "",
-  colors: {
-    mainBlue: "#007fff",
-    darkBlue: "#17224d",
-    brightBlue: "#17e9e1",
-    paleBlue: "#f5fafa",
-  },
-};
