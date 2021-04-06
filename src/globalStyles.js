@@ -1,9 +1,9 @@
 export const globalStyles = {
-  fontFamily: "Asap",
-  fontSize: {
-    sm: "16pt",
-    md: "28pt",
-    lg: "40pt",
+  font: "Roboto",
+  text: {
+    sm: "15pt",
+    md: "28px",
+    lg: "40px",
   },
   colors: {
     mainBlue: "#007fff",
