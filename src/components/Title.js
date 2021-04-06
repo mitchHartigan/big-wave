@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 export const Title = (props) => {
-  const { spanWidth, size, children } = props;
+  const { spanWidth, size, children, styles } = props;
 
   return (
-    <Container>
+    <Container styles={styles}>
       <Header size={size}>{children}</Header>
       <Underline spanWidth={spanWidth}></Underline>
     </Container>
@@ -19,6 +19,7 @@ const Header = styled.h2`
   color: ${(props) => props.theme.colors.darkBlue};
   -webkit-font-smoothing: antialiased;
   margin-bottom: 7px;
+  font-weight: normal;
 `;
 
 const Underline = styled.span`
@@ -33,4 +34,5 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: ${(props) => (props.alignTitle ? props.alignTitle : "center")};
+  ${(props) => props.styles}
 `;

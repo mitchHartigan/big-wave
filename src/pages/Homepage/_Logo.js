@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function Logo() {
   return (
     <Container>
-      <Image src="big_wave_logo_text.png" alt="" />
+      <Image src="big_wave_logo_text.png" alt="Big Wave logo, with text." />
     </Container>
   );
 }
@@ -15,6 +15,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-items: center;
+  margin-top: 50px;
 `;
 
 const Image = styled.img``;

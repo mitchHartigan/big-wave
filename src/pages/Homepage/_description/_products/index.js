@@ -32,6 +32,6 @@ export const Products = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 `;

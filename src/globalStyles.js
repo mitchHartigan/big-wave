@@ -1,10 +1,11 @@
 export const globalStyles = {
-  font: "Roboto",
+  font: "Asap",
   text: {
     xs: "16px",
     sm: "18px",
-    md: "28px",
-    lg: "40px",
+    md: "22px",
+    lg: "28px",
+    xl: "40px",
   },
   colors: {
     mainBlue: "#007fff",

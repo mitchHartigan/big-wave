@@ -11,8 +11,10 @@ export const Description = () => {
     <CenterBlock>
       <Container>
         <Logo />
-        <Title>About Us</Title>
-        <Subtext alignment="center">
+        <Title size="lg" styles={"margin-top: 50px;"}>
+          About Us
+        </Title>
+        <Subtext alignment="center" styles={"margin: 40px 0px 50px 0px"}>
           We’re experts at improving your reservoir and tank water quality.
           Located in Oceanside, California, we’ve designed the most advanced
           reservoir mixer and chloramine boosting system for the municipal water
@@ -25,7 +27,7 @@ export const Description = () => {
 };
 
 const Container = styled.div`
-  max-width: 70vw;
+  max-width: 67vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

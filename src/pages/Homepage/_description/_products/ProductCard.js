@@ -21,7 +21,9 @@ export const ProductCard = (props) => {
     <Container>
       <Image src={props.imgURL} alt={props.imgAlt} />
       <Title size="md">{props.title}</Title>
-      <Subtext alignment="center">{props.text}</Subtext>
+      <Subtext alignment="center" size="xs">
+        {props.text}
+      </Subtext>
       <CenterBlock>
         <LinkButton to={props.link}>Learn more</LinkButton>
       </CenterBlock>
