@@ -1,7 +1,8 @@
 export const globalStyles = {
   font: "Roboto",
   text: {
-    sm: "15pt",
+    xs: "16px",
+    sm: "18px",
     md: "28px",
     lg: "40px",
   },

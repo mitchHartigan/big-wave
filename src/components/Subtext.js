@@ -2,7 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 export const Subtext = (props) => {
-  return <_Subtext alignment={props.alignment}>{props.children}</_Subtext>;
+  const { alignment, children, styles } = props;
+
+  return (
+    <_Subtext alignment={alignment} styles={styles}>
+      {children}
+    </_Subtext>
+  );
 };
 
 const _Subtext = styled.p`
@@ -14,4 +20,5 @@ const _Subtext = styled.p`
   width: 100%;
   line-height: 30px;
   -webkit-font-smoothing: antialiased;
+  ${(props) => props.styles}
 `;

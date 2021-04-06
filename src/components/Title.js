@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 export const Title = (props) => {
+  const { spanWidth, size, children } = props;
+
   return (
     <Container>
-      <Header>{props.children}</Header>
-      <Underline spanWidth={props.spanWidth}></Underline>
+      <Header size={size}>{children}</Header>
+      <Underline spanWidth={spanWidth}></Underline>
     </Container>
   );
 };
@@ -13,7 +15,7 @@ export const Title = (props) => {
 const Header = styled.h2`
   margin: 0px;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text.lg};
+  font-size: ${(props) => props.theme.text[props.size]};
   color: ${(props) => props.theme.colors.darkBlue};
   -webkit-font-smoothing: antialiased;
   margin-bottom: 7px;

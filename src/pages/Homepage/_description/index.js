@@ -4,6 +4,7 @@ import { Title } from "../../../components/Title";
 import { Subtext } from "../../../components/Subtext";
 import { CenterBlock } from "../../../components/CenterBlock";
 import styled from "styled-components";
+import { Products } from "./_products/index";
 
 export const Description = () => {
   return (
@@ -17,13 +18,14 @@ export const Description = () => {
           reservoir mixer and chloramine boosting system for the municipal water
           market.
         </Subtext>
+        <Products />
       </Container>
     </CenterBlock>
   );
 };
 
 const Container = styled.div`
-  max-width: 75vw;
+  max-width: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
