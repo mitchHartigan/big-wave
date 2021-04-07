@@ -6,16 +6,6 @@ export const Products = () => {
   return (
     <Container>
       <ProductCard
-        imgURL="product_card_cbs.png"
-        imgAlt="The Chloramine Boosting System."
-        title="Chloramine Boosting System"
-        text={`A flexible, precise, and 
-             dependable system for maintaining total
-             chlorine residual in water reservoirs.
-            `}
-        link="/ChloramineBoostingSystem"
-      />
-      <ProductCard
         imgURL="product_card_tidal_wave.png"
         imgAlt="The Tidal Wave Mixer."
         title="Tidal Wave Mixer"
@@ -24,6 +14,16 @@ export const Products = () => {
              and storage tank longevity.
              `}
         link="/TidalWaveMixer"
+      />
+      <ProductCard
+        imgURL="product_card_cbs.png"
+        imgAlt="The Chloramine Boosting System."
+        title="Chloramine Boosting System"
+        text={`A flexible, precise, and 
+             dependable system for maintaining total
+             chlorine residual in water reservoirs.
+            `}
+        link="/ChloramineBoostingSystem"
       />
     </Container>
   );

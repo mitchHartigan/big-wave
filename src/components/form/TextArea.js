@@ -2,10 +2,41 @@ import React from "react";
 import styled from "styled-components";
 
 export const TextArea = (props) => {
-  return <_TextArea onChange={props.handleUpdate} />;
+  return (
+    <Container>
+      <Label>{props.label}</Label>
+      <_TextArea onChange={props.handleChange} />
+    </Container>
+  );
 };
 
 const _TextArea = styled.textarea`
+  height: 160px;
+  padding: 5px 5px 5px 5px;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text.sm};
+  font-size: ${(props) => props.theme.text.xs};
+  border: 1px solid ${(props) => props.theme.colors.darkBlue};
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.25);
+  resize: none;
+  &:focus {
+    border 2px solid ${(props) => props.theme.colors.mainBlue};
+  }
+`;
+
+const Label = styled.p`
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.text.xs};
+  color: ${(props) => props.theme.colors.darkBlue};
+  margin: 10px 0px 10px 0px;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px 0px 20px 0px;
 `;
