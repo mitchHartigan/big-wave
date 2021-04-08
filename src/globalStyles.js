@@ -1,6 +1,7 @@
 export const globalStyles = {
   font: "Asap",
   text: {
+    xxs: "14px",
     xs: "16px",
     sm: "18px",
     md: "22px",

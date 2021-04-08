@@ -18,4 +18,9 @@ const Container = styled.div`
   margin-top: 50px;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  @media (max-width: 600px) {
+    height: auto;
+    width: 306px;
+  }
+`;

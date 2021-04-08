@@ -8,7 +8,7 @@ export default function Homepage() {
     <Container>
       <HeaderFiller />
       <Description />
-      <Contact />
+      {/* <Contact /> */}
     </Container>
   );
 }
