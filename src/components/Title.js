@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 export const Title = (props) => {
-  const { spanWidth, size, children, styles } = props;
+  const { spanWidth, size, children, align, styles } = props;
 
   return (
     <Container styles={styles}>
-      <Header size={size}>{children}</Header>
+      <Header size={size} align={align}>
+        {children}
+      </Header>
       <Underline spanWidth={spanWidth}></Underline>
     </Container>
   );
@@ -20,6 +22,7 @@ const Header = styled.h2`
   -webkit-font-smoothing: antialiased;
   margin-bottom: 7px;
   font-weight: normal;
+  text-align: ${(props) => props.align};
 `;
 
 const Underline = styled.span`

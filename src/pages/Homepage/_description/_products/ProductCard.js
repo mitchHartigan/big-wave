@@ -41,6 +41,11 @@ const Container = styled.div`
   padding: 0px 50px 0px 50px;
   justify-content: center;
   border-radius: 2px;
+
+  @media (max-width: 1800px) {
+    width: 400px;
+    height: 400px;
+  }
 `;
 
 const Image = styled.img`
