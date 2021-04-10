@@ -1,17 +1,17 @@
-import React from 'react'
-import {NavLink} from './NavLink'
-import {Logo} from './_Logo'
-import styled from 'styled-components'
+import React from "react";
+import { NavLink } from "./NavLink";
+import { Logo } from "./_Logo";
+import styled from "styled-components";
 
 export class Navbar extends React.Component {
   constructor(props) {
-    super(props)
-  
+    super(props);
+
     this.state = {
-      scrollPos: 0,     
-    }
+      scrollPos: 0,
+    };
   }
-  
+
   componentDidMount() {
     window.addEventListener("scroll", this._captureScrollPos);
   }
@@ -25,39 +25,36 @@ export class Navbar extends React.Component {
   }
 
   render() {
-  return (
-    <Container>
-      <Navbar_ scrollPos={this.state.scrollPos}>
-      <LinkContainer width="33%">
-       <NavLink route="/" exact>Contact</NavLink> 
-       <NavLink route="/casestudies">Case Studies</NavLink>
-       </LinkContainer>
-       <Logo />
-       <LinkContainer width='33%'>
-       <NavLink route="/ChloramineBoostingSystem" style={NavlinkStyleOverride}>Chloramine Boosting System</NavLink>
-       <NavLink route="/TidalWaveMixer">Tidal Wave Mixer</NavLink>
-       </LinkContainer>
-      </Navbar_>
-    </Container>
-  )
+    return (
+      <Container>
+        <Navbar_ scrollPos={this.state.scrollPos}>
+          <NavLink route="/" exact>
+            Contact Us
+          </NavLink>
+          <NavLink route="/casestudies">Case Studies</NavLink>
+          <Logo />
+          <NavLink route="/ChloramineBoostingSystem">
+            Chloramine Boosting System
+          </NavLink>
+          <NavLink route="/TidalWaveMixer">Tidal Wave Mixer</NavLink>
+        </Navbar_>
+      </Container>
+    );
   }
 }
 
-const NavlinkStyleOverride = {
-  marginLeft: '2vw',
-}
-
-const Navbar_ = styled.div.attrs(props => ({
+const Navbar_ = styled.div.attrs((props) => ({
   style: {
-    opacity: `${props.scrollPos  > 0 ? '1': '0'}`,
-    pointerEvents: `${props.scrollPos > 0 ? 'initial' : 'none'}`,
-    userSelect: `${props.scrollPos > 0 ? 'initial': 'none'}`,
-  }
+    opacity: `${props.scrollPos > 0 ? "1" : "0"}`,
+    pointerEvents: `${props.scrollPos > 0 ? "initial" : "none"}`,
+    userSelect: `${props.scrollPos > 0 ? "initial" : "none"}`,
+  },
 }))`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.7vh 6vw 0.7vh 6vw;
+  align-items: center;
+  padding: 0.5vh 2vw 0.5vh 2vw;
   margin-top: 1.5vh;
   transition: opacity 150ms ease-in;
   border-radius: 3px;
@@ -65,6 +62,14 @@ const Navbar_ = styled.div.attrs(props => ({
   box-sizing: border-box;
   width: 80%;
   box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 1700px) {
+    padding: 0.5vh 4vw 0.5vh 5vw;
+  }
+
+  @media (max-width: 1600px) {
+    width: 90%;
+  }
 `;
 
 const Container = styled.div`
@@ -79,5 +84,5 @@ const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: ${props => props.width};
+  width: ${(props) => props.width};
 `;
