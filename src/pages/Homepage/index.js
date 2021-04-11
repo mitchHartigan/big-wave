@@ -10,7 +10,7 @@ export default function Homepage() {
       <Navbar />
       <HeaderFiller />
       <Description />
-      {/* <Contact /> */}
+      <Contact />
     </Container>
   );
 }

@@ -28,6 +28,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0px 40px 0px 40px;
+
+  @media (max-width: 800px) {
+    margin: 2vh 2vw 2.5vh 2vw;
+  }
 `;
 
 const Detail = styled.a`
@@ -35,6 +39,11 @@ const Detail = styled.a`
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text.md};
   text-decoration: none;
+
+
+  @media (max-width: 800px) {
+    font-size:  ${props => props.theme.text.sm};
+}
 `;
 
 const Icon = styled.img`

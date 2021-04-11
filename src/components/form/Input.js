@@ -24,6 +24,10 @@ const _Input = styled.input`
   &:focus {
     border 2px solid ${(props) => props.theme.colors.mainBlue};
   }
+
+  @media (max-width: 700px) {
+    font-size: ${props => props.theme.text.xxs};
+  }
 `;
 
 const Label = styled.p`
@@ -31,11 +35,23 @@ const Label = styled.p`
   font-size: ${(props) => props.theme.text.xs};
   color: ${(props) => props.theme.colors.darkBlue};
   margin: 10px 0px 10px 0px;
+
+
+  @media (max-width: 700px) {
+    font-size: ${props => props.theme.text.xxs};
+  }
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  margin: 20px 0px 20px 0px;
+  widht: 100%;
+  box-sizing: border-box;
+  padding: 20px 0px 20px 0px;
+
+
+  @media (max-width: 700px) {
+    padding: 1vh 0px 1kvh 0px;
+  }
 `;

@@ -6,6 +6,8 @@ import { Subtext } from "components/Subtext";
 import { TextArea } from "components/form/TextArea";
 import { Button } from "components/Button";
 import { CenterBlock } from "components/CenterBlock";
+import styled from 'styled-components'
+
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -39,3 +41,9 @@ export default class ContactForm extends Component {
     );
   }
 }
+
+
+const FormDescription = styled.p`
+
+
+`;

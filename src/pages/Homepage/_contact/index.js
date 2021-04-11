@@ -17,9 +17,9 @@ export default class Contact extends Component {
     return (
       <Container>
         <Title size="lg">Contact</Title>
-        <Subtext alignment="center" styles="margin: 40px 0px 30px 0px;">
+        <DescriptionText alignment="center">
           We’d love to hear from you. Reach out via phone or email:
-        </Subtext>
+        </DescriptionText>
         <InfoContainer>
           <Info
             imgURL="contact_phone_icon.png"
@@ -50,4 +50,24 @@ const InfoContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+`;
+
+const DescriptionText = styled.p`
+  margin: 3vh 0px 3vh 0px;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.text[props.size]};
+  text-align: ${(props) => props.alignment};
+  color: ${(props) => props.theme.colors.darkBlue};
+  width: 100%;
+  line-height: 30px;
+
+  @media (max-width: 700px) {
+    font-size: ${props => props.theme.text.xxs};
+    margin-bottom: 2vh;
+  }
 `;
