@@ -25,4 +25,5 @@ const Image = styled.img`
   width: 510px;
   height: 439px;
   margin-right: 5vw;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
