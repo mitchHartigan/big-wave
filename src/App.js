@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./index.css";
 
 import Homepage from "./pages/Homepage/index";
+import { ChloramineBoostingSystem } from "pages/Chloramine Boosting System";
 
 export default function App() {
   return (
@@ -15,12 +16,12 @@ export default function App() {
             <Homepage />
           </Route>
 
-          <Route path="/TidalWaveMixer">
+          <Route path="/tidalwavemixer">
             <></>
           </Route>
 
-          <Route path="/CBS">
-            <></>
+          <Route path="/chloramineboostingsystem">
+            <ChloramineBoostingSystem />
           </Route>
         </Switch>
       </Router>

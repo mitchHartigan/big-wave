@@ -3,7 +3,7 @@ import { NavLink } from "./NavLink";
 import { Logo } from "./_Logo";
 import styled from "styled-components";
 
-export class Navbar extends React.Component {
+export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -33,10 +33,10 @@ export class Navbar extends React.Component {
           </NavLink>
           <NavLink route="/casestudies">Case Studies</NavLink>
           <Logo />
-          <NavLink route="/ChloramineBoostingSystem">
+          <NavLink route="/chloramineboostingsystem">
             Chloramine Boosting System
           </NavLink>
-          <NavLink route="/TidalWaveMixer">Tidal Wave Mixer</NavLink>
+          <NavLink route="/tidalwavemixer">Tidal Wave Mixer</NavLink>
         </Navbar_>
       </Container>
     );

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Navbar} from 'components/navbar/index'
+import Navbar from 'components/navbar/index'
 import { Description } from "./_description/index";
 import Contact from "./_contact/index";
 
