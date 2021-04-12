@@ -6,7 +6,7 @@ import { Header } from "./_header/Header";
 export const ChloramineBoostingSystem = () => {
   return (
     <Container>
-      <Navbar />
+      <Navbar alwaysDisplay />
       <Header />
     </Container>
   );

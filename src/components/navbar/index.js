@@ -27,7 +27,10 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <Container>
-        <Navbar_ scrollPos={this.state.scrollPos}>
+        <Navbar_
+          scrollPos={this.state.scrollPos}
+          alwaysDisplay={this.props.alwaysDisplay}
+        >
           <NavLink route="/" exact>
             Contact Us
           </NavLink>
@@ -45,7 +48,7 @@ export default class Navbar extends React.Component {
 
 const Navbar_ = styled.div.attrs((props) => ({
   style: {
-    opacity: `${props.scrollPos > 0 ? "1" : "0"}`,
+    opacity: `${props.scrollPos > 0 || props.alwaysDisplay ? "1" : "0"}`,
     pointerEvents: `${props.scrollPos > 0 ? "initial" : "none"}`,
     userSelect: `${props.scrollPos > 0 ? "initial" : "none"}`,
   },
@@ -78,11 +81,4 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-`;
-
-const LinkContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: ${(props) => props.width};
 `;
