@@ -3,17 +3,26 @@ import styled from "styled-components";
 import { Title } from "components/Title";
 import { ScrollButton } from "components/navigation/ScollButton";
 import { CenterBlock } from "components/CenterBlock";
+import FadeIn from "components/FadeIn";
 
 export const CallToAction = () => {
   return (
     <Container>
-      <Title spanWidth={"20vw"} size="xl">
-        Our Chloramine Boosting System.
-      </Title>
-      <Text>Flexible. Precise. Dependable.</Text>
-      <CenterBlock>
-        <ScrollButton>View details</ScrollButton>
-      </CenterBlock>
+      <FadeIn delay="50">
+        <Title spanWidth={"20vw"} size="xl">
+          Our Chloramine Boosting System.
+        </Title>
+      </FadeIn>
+
+      <FadeIn delay="350">
+        <Text>Flexible. Precise. Dependable.</Text>
+      </FadeIn>
+
+      <FadeIn delay="650">
+        <CenterBlock>
+          <ScrollButton>View details</ScrollButton>
+        </CenterBlock>
+      </FadeIn>
     </Container>
   );
 };

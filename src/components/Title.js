@@ -1,11 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
+/**
+ *
+ * @param props
+ * @param props.spanWidth - width of the span element in px, vw, etc.
+ * @param props.size - font size of the Title elem, in sm, lg, etc.
+ * @param props.chilren - the text to be displayed as the Title.
+ * @param props.align - text-align property of the Title.
+ * @param props.styles - additional styles to be passed into the Container.
+ * @param props.alignTitle - flex align-items of the Container.
+ */
+
 export const Title = (props) => {
-  const { spanWidth, size, children, align, styles } = props;
+  const { spanWidth, size, children, align, alignTitle, styles } = props;
 
   return (
-    <Container styles={styles}>
+    <Container styles={styles} alignTitle={alignTitle}>
       <Header size={size} align={align}>
         {children}
       </Header>
@@ -23,6 +34,7 @@ const Header = styled.h2`
   margin-bottom: 7px;
   font-weight: normal;
   text-align: ${(props) => props.align};
+  ${(props) => props.styles};
 `;
 
 const Underline = styled.span`
