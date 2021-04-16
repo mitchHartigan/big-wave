@@ -103,17 +103,6 @@ export class ProductFeature extends React.Component {
   }
 }
 
-const fadeIn = keyframes`
-  from {
-    transform: translate(0, 20px);
-  }
-
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-`;
-
 const Container = styled.div`
   display: flex;
   flex-direction: row;
