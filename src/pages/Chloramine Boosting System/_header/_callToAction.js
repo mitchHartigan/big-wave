@@ -3,29 +3,51 @@ import styled from "styled-components";
 import { Title } from "components/Title";
 import { ScrollButton } from "components/navigation/ScollButton";
 import { CenterBlock } from "components/CenterBlock";
-import FadeIn from "components/FadeIn";
+import { FadeIn } from "components/FadeIn";
+import VisibilitySensor from "react-visibility-sensor";
 
-export const CallToAction = () => {
-  return (
-    <Container>
-      <FadeIn delay="50">
-        <Title spanWidth={"20vw"} size="xl">
-          Our Chloramine Boosting System.
-        </Title>
-      </FadeIn>
+export default class CallToAction extends React.Component {
+  constructor(props) {
+    super(props);
 
-      <FadeIn delay="350">
-        <Text>Flexible. Precise. Dependable.</Text>
-      </FadeIn>
+    this.state = {
+      visible: false,
+    };
+  }
 
-      <FadeIn delay="650">
-        <CenterBlock>
-          <ScrollButton>View details</ScrollButton>
-        </CenterBlock>
-      </FadeIn>
-    </Container>
-  );
-};
+  _display = (visibile) => {
+    if (visibile) {
+      console.log("should be visible");
+      this.setState({ visible: true });
+    }
+  };
+
+  render() {
+    const { visible } = this.state;
+
+    return (
+      <VisibilitySensor onChange={this._display}>
+        <Container>
+          <FadeIn delay="50" visible={visible}>
+            <Title spanWidth={"20vw"} size="xl">
+              Our Chloramine Boosting System.
+            </Title>
+          </FadeIn>
+
+          <FadeIn delay="350" visible={visible}>
+            <Text>Flexible. Precise. Dependable.</Text>
+          </FadeIn>
+
+          <FadeIn delay="650" visible={visible}>
+            <CenterBlock>
+              <ScrollButton>View details</ScrollButton>
+            </CenterBlock>
+          </FadeIn>
+        </Container>
+      </VisibilitySensor>
+    );
+  }
+}
 
 const Container = styled.div`
   display: flex;

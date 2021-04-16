@@ -1,19 +1,19 @@
-import React, { Children } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
 import Lottie from "react-lottie";
-import animationData from "../_animationData/cbs_controlBoard_flat_data.json";
 import VisibilitySensor from "react-visibility-sensor";
 import { Description } from "./_Description";
+import { FadeIn } from "components/FadeIn";
 
 export class ProductFeature extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      renderFeatureBlock: false,
-      playAnimation: false,
+      visible: false,
       windowSize: window.innerWidth,
       animationSize: 500,
+      playAnimation: false,
     };
   }
 
@@ -54,50 +54,49 @@ export class ProductFeature extends React.Component {
     });
   };
 
-  _fadeIn = (isVisible) => {
-    if (!this.state.playAnimation && isVisible) {
-      this.setState({ renderFeatureBlock: true }, () => {
-        setTimeout(() => this.setState({ playAnimation: true }), 600);
+  _display = (visible) => {
+    if (visible) {
+      this.setState({ visible: true }, () => {
+        setTimeout(() => this.setState({ playAnimation: true }), 900);
       });
     }
   };
 
   render() {
-    const { playAnimation, renderFeatureBlock, animationSize } = this.state;
+    const { animationSize, visible, playAnimation } = this.state;
     const { description, animSource, animSpeed, swap } = this.props;
 
     // this is an object that the 'options' prop in the Lottie component expects.
     const defaultOptions = {
       loop: false,
       autoplay: false,
-      animationData: animSource, //this.props.animationData
+      animationData: animSource,
       rendererSettings: {
         preserveAspectRatio: "xMidYMid meet",
       },
     };
 
     return (
-      <VisibilitySensor
-        onChange={(isVisible) => {
-          this._fadeIn(isVisible);
-        }}
-      >
+      <VisibilitySensor onChange={this._display}>
         <Container swap={swap}>
-          {swap && <Description data={description} swap={swap} />}
-          <AnimationContainer
-            id="animationContainer"
-            visible={renderFeatureBlock}
-            swap={swap}
-          >
-            <Lottie
-              options={defaultOptions}
-              width={animationSize}
-              isStopped={!playAnimation}
-              speed={animSpeed} // this.props.animationSpeed
-            />
+          {swap && (
+            <Description data={description} swap={swap} visible={visible} />
+          )}
+
+          <AnimationContainer id="animationContainer" swap={swap}>
+            <FadeIn delay="500" visible={visible}>
+              <Lottie
+                options={defaultOptions}
+                width={animationSize}
+                isStopped={!playAnimation}
+                speed={animSpeed}
+              />
+            </FadeIn>
           </AnimationContainer>
 
-          {!swap && <Description data={description} swap={swap} />}
+          {!swap && (
+            <Description data={description} swap={swap} visible={visible} />
+          )}
         </Container>
       </VisibilitySensor>
     );
@@ -132,11 +131,6 @@ const Container = styled.div`
 
 const AnimationContainer = styled.div`
   margin: ${(props) => (props.swap ? "0vh 17vw 0vh 5vw" : "0vh 5vw 0vh 15vw")};
-  opacity: 0;
-  animation: ${(props) => (props.visible ? fadeIn : "")};
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-
   @media (max-width: 1600px) {
     margin: ${(props) =>
       props.swap ? "0vh 10em 0vh 5vw" : "0vh 5vw 0vh 15vw"};

@@ -1,5 +1,4 @@
 import React from "react";
-import VisibilitySensor from "react-visibility-sensor";
 import styled, { keyframes } from "styled-components";
 
 /**
@@ -8,35 +7,15 @@ import styled, { keyframes } from "styled-components";
  * @param props.children - element to fade in.
  */
 
-export default class FadeIn extends React.Component {
-  constructor(props) {
-    super(props);
+export const FadeIn = (props) => {
+  const { children, delay, visible } = props;
 
-    this.state = {
-      visible: false,
-    };
-  }
-
-  _setVisible = (isVisible) => {
-    console.log("setVisible called");
-    if (isVisible) {
-      console.log("set to visible!");
-      this.setState({ visible: true });
-    }
-  };
-
-  render() {
-    const { children, delay } = this.props;
-
-    return (
-      <VisibilitySensor onChange={(isVisible) => this._setVisible(isVisible)}>
-        <FadeWrapper visible={this.state.visible} delay={delay}>
-          {children}
-        </FadeWrapper>
-      </VisibilitySensor>
-    );
-  }
-}
+  return (
+    <FadeWrapper visible={visible} delay={delay}>
+      {children}
+    </FadeWrapper>
+  );
+};
 
 const fadeIn = keyframes`
   from {

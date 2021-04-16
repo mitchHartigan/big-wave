@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { CallToAction } from "./_callToAction";
+import CallToAction from "./_callToAction";
 
 export const Header = () => {
   return (

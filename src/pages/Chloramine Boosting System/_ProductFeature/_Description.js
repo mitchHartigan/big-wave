@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Title } from "components/Title";
-import FadeIn from "components/FadeIn";
+import { FadeIn } from "components/FadeIn";
 import { LinkText } from "./_LinkText";
 
 /**
@@ -22,11 +22,11 @@ export const Description = (props) => {
     link,
     href,
   } = props.data;
-  const { swap } = props;
+  const { swap, visible } = props;
 
   return (
     <Container swap={swap}>
-      <FadeIn delay="250">
+      <FadeIn delay="250" visible={visible}>
         <Title
           spanWidth={adaptSpanWidth}
           alignTitle="flex-start"
@@ -35,7 +35,7 @@ export const Description = (props) => {
           {titleText}
         </Title>
       </FadeIn>
-      <FadeIn delay="450">
+      <FadeIn delay="450" visible={visible}>
         <TextContainer>
           <Subtext>{descriptionText}</Subtext>
           <LinkText text={linkDescription} href={href}>
