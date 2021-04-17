@@ -5,7 +5,13 @@ import CallToAction from "./_callToAction";
 export const Header = () => {
   return (
     <Container>
-      <Image src="cbs_header.png" />
+      <ImgContainer>
+        <picture>
+          <source media="(min-width: 1400px)" srcSet="cbs_header_lg.png" />
+          <source media="(min-width: 1200px)" srcSet="cbs_header_md.png" />
+          <Image src="cbs_header_sm.png" />
+        </picture>
+      </ImgContainer>
       <CallToAction />
     </Container>
   );
@@ -22,8 +28,9 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  width: 510px;
-  height: 439px;
-  margin-right: 5vw;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+`;
+
+const ImgContainer = styled.div`
+  margin-right: 5vw;
 `;

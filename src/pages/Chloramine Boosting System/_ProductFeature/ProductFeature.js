@@ -54,6 +54,9 @@ export class ProductFeature extends React.Component {
     });
   };
 
+  // set the container to visible, so the text will start fading in. Wait
+  // for 900 ms, then start playing the animation (so that it fades in with
+  // the rest of the text, THEN animates.)
   _display = (visible) => {
     if (visible) {
       this.setState({ visible: true }, () => {
