@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 /**
- *
  * @param props
  * @param props.spanWidth - width of the span element in px, vw, etc.
  * @param props.size - font size of the Title elem, in sm, lg, etc.

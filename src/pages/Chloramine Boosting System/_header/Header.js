@@ -25,6 +25,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 
 const Image = styled.img`
@@ -33,4 +37,8 @@ const Image = styled.img`
 
 const ImgContainer = styled.div`
   margin-right: 5vw;
+
+  @media (max-width: 1100px) {
+    margin-right: 0vw;
+  }
 `;

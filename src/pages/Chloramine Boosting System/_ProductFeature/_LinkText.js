@@ -15,7 +15,9 @@ export const LinkText = (props) => {
   return (
     <Text size={size}>
       {text}
-      <Link href={href}>{children}</Link>
+      <Link href={href} target="_blank">
+        {children}
+      </Link>
     </Text>
   );
 };

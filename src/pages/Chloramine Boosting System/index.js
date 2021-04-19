@@ -5,6 +5,8 @@ import { Header } from "./_header/Header";
 import { ProductFeature } from "./_ProductFeature/ProductFeature";
 import controlPanelAnimation from "./_animationData/cbs_controlBoard_flat_data.json";
 import elementAnimation from "./_animationData/element_illustration_data.json";
+import graphAnimation from "./_animationData/graph_illustration_animation_data.json";
+import ProductDetails from "./_ProductDetails/ProductDetails";
 
 const feature1 = {
   titleText: "Ensures Uniform Water Quality.",
@@ -20,7 +22,7 @@ const feature1 = {
 };
 
 const feature2 = {
-  titleText: "Minimal Operator Involvement",
+  titleText: "Minimal Operator Involvement.",
   descriptionText: `
   The CBS system will perform chemical dosing to an operator selected
   set point automatically, reducing the amount of operator oversight needed.
@@ -29,6 +31,20 @@ const feature2 = {
   `,
   linkDescription: "Read more about this process and ",
   link: "view the control panel interface here.",
+  href: "#",
+};
+
+const feature3 = {
+  titleText: "Accurate Chlorine Residual Measurement.",
+  descriptionText: `
+  The highly accurate chlorine residual analyzer and its ability to measure
+  either Free or Total chlorine residuals allows the CBS to control to the
+  operator selected set point. From potable (drinking) water reservoirs to
+  standpipes, the CBS helps operators gain control of water quality in both 
+  the reservoir and distribution system.
+  `,
+  linkDescription: "Download and view our",
+  link: "chlorine residual management accuracy tests here.",
   href: "#",
 };
 
@@ -69,7 +85,13 @@ export class ChloramineBoostingSystem extends React.Component {
           animSpeed={0.8}
           swap
         />
+        <ProductFeature
+          description={feature3}
+          animSource={graphAnimation}
+          animSpeed={0.9}
+        />
         <Navbar alwaysDisplay />
+        <ProductDetails />
       </Container>
     );
   }

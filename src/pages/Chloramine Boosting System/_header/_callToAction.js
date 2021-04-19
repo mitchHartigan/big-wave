@@ -29,7 +29,7 @@ export default class CallToAction extends React.Component {
       <VisibilitySensor onChange={this._display}>
         <Container>
           <FadeIn delay="50" visible={visible}>
-            <Title spanWidth={"20vw"} size="xl">
+            <Title spanWidth={"20vw"} size={_adaptTitleSize}>
               Our Chloramine Boosting System.
             </Title>
           </FadeIn>
@@ -54,6 +54,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 5vw;
+
+  @media (max-width: 1100px) {
+    margin: 3vh 0vw 0vw 0vw;
+  }
 `;
 
 const Text = styled.p`
@@ -65,3 +69,24 @@ const Text = styled.p`
   width: 100%;
   -webkit-font-smoothing: antialiased;
 `;
+
+function _adaptTitleSize() {
+  let breakpoint = window.matchMedia("(max-width: 1200px)");
+
+  if (breakpoint.matches) {
+    // window is smaller than 800px.
+    console.log("breakpoin hit");
+    return "xl";
+  } else {
+    return "xxs";
+  }
+}
+
+const adaptSpanWidth = () => {
+  let breakpoint = window.matchMedia("(max-width: 1330px)");
+
+  if (breakpoint.matches) {
+    return "15vw";
+  }
+  return "6vw";
+};
