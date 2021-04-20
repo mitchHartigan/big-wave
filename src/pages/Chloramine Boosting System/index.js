@@ -100,6 +100,5 @@ export class ChloramineBoostingSystem extends React.Component {
 const Container = styled.div`
   background-color: ${(props) => props.theme.colors.paleBlue};
   display: flex;
-  flex-direction: column;
-  height: 500vh;
+  flex-direction: column; ;
 `;

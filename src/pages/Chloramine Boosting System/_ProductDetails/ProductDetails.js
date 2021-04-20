@@ -19,7 +19,7 @@ export default class ProductDetails extends Component {
   render() {
     return (
       <Container>
-        <Card>
+        <Card id="scrollTarget">
           <DetailsContainer>
             <Title size="lg">Product Details</Title>
             <Text>
