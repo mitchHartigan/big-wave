@@ -26,7 +26,7 @@ export const Description = (props) => {
 
   return (
     <Container swap={swap}>
-      <FadeIn delay="250" visible={visible}>
+      <FadeIn delay="0" visible={visible}>
         <Title
           spanWidth={adaptSpanWidth}
           alignTitle="flex-start"
@@ -35,7 +35,7 @@ export const Description = (props) => {
           {titleText}
         </Title>
       </FadeIn>
-      <FadeIn delay="450" visible={visible}>
+      <FadeIn delay="250" visible={visible}>
         <TextContainer>
           <Subtext>{descriptionText}</Subtext>
           <LinkText text={linkDescription} href={href}>
