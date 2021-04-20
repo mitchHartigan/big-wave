@@ -29,7 +29,7 @@ export default class CallToAction extends React.Component {
       <VisibilitySensor onChange={this._display}>
         <Container>
           <FadeIn delay="50" visible={visible}>
-            <Title spanWidth={"20vw"} size={_adaptTitleSize}>
+            <Title spanWidth={"20vw"} size={"xl"}>
               Our Chloramine Boosting System.
             </Title>
           </FadeIn>

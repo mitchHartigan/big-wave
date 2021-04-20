@@ -129,6 +129,6 @@ const AnimationContainer = styled.div`
   }
 
   @media (max-width: 1330px) {
-    margin: 0vh 0vw 4vh 0vw;
+    margin: 0vh 0vw 2vh 0vw;
   }
 `;

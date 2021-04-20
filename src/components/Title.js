@@ -34,6 +34,16 @@ const Header = styled.h2`
   font-weight: normal;
   text-align: ${(props) => props.align};
   ${(props) => props.styles};
+
+  @media (max-width: 1300px) {
+    font-size: ${(props) =>
+      props.size === "xl" ? props.theme.text.lg : props.theme.text[props.size]};
+  }
+
+  @media (max-width: 800px) {
+    text-align: center;
+    line-height: 1.2em;
+  }
 `;
 
 const Underline = styled.span`

@@ -3,6 +3,8 @@ import { Title } from "components/Title";
 import styled from "styled-components";
 import { ProductDetailsImage } from "./_ProductDetailsImage";
 import { Bullets } from "./_Bullets/Bullets";
+import { LinkButton } from "components/navigation/LinkButton";
+import { CenterBlock } from "components/CenterBlock";
 
 const bulletPoints = [
   "Continuous measurement of water quality.",
@@ -29,6 +31,13 @@ export default class ProductDetails extends Component {
               <Bullets points={bulletPoints} />
             </FeaturesContainer>
           </DetailsContainer>
+          <Text>
+            Wondering if the Chloramine Boosting System is the right solution
+            for your tank?
+          </Text>
+          <CenterBlock>
+            <LinkButton to="/">Get in touch with us</LinkButton>
+          </CenterBlock>
         </Card>
       </Container>
     );
@@ -39,7 +48,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 2vh 10vw 2vh 10vw;
+  padding: 2vh 15vw 2vh 15vw;
+
+  @media (max-width: 1400px) {
+    padding: 2vh 5vw 2vh 5vw;
+  }
 `;
 
 const Card = styled.div`
@@ -47,12 +60,12 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   width: 100%;
-  padding: 2vh 0vw 2vh 0vw;
+  padding: 4vh 0vw 4vh 0vw;
 
   @media (max-width: 800px) {
-    padding: 0vh 3vw 0vh 3vw;
+    padding: 2vh 4vw 3vh 4vw;
   }
 `;
 
@@ -71,7 +84,7 @@ const FeaturesContainer = styled.div`
 `;
 
 const DetailsContainer = styled.div`
-  width: 70%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +95,7 @@ const DetailsContainer = styled.div`
 `;
 
 const Text = styled.p`
-  margin: 2vh 0px 1vh 0px;
+  margin: 4vh 0px 4vh 0px;
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text.xs};
   text-align: center;
@@ -94,7 +107,7 @@ const Text = styled.p`
     font-size: ${(props) => props.theme.text.xxs};
   }
 
-  @media (max-width: 800px) {
-    text-align: justify;
+  @media (max-width: 1400px) {
+    margin-top: 2vh;
   }
 `;

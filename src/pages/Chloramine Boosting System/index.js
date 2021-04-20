@@ -43,7 +43,7 @@ const feature3 = {
   standpipes, the CBS helps operators gain control of water quality in both 
   the reservoir and distribution system.
   `,
-  linkDescription: "Download and view our",
+  linkDescription: "Download and view our ",
   link: "chlorine residual management accuracy tests here.",
   href: "#",
 };
@@ -90,8 +90,8 @@ export class ChloramineBoostingSystem extends React.Component {
           animSource={graphAnimation}
           animSpeed={0.9}
         />
-        <Navbar alwaysDisplay />
         <ProductDetails />
+        <Navbar alwaysDisplay />
       </Container>
     );
   }

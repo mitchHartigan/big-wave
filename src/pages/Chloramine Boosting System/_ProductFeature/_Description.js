@@ -83,6 +83,7 @@ const Subtext = styled.p`
 
   @media (max-width: 1330px) {
     text-align: center;
+    margin-top: 3vh;
   }
 
   @media (max-width: 600px) {

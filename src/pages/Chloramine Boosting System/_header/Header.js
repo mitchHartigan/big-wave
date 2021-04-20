@@ -7,8 +7,8 @@ export const Header = () => {
     <Container>
       <ImgContainer>
         <picture>
-          <source media="(min-width: 1400px)" srcSet="cbs_header_lg.png" />
-          <source media="(min-width: 1200px)" srcSet="cbs_header_md.png" />
+          <source media="(min-width: 1600px)" srcSet="cbs_header_lg.png" />
+          <source media="(min-width: 1300px)" srcSet="cbs_header_md.png" />
           <Image src="cbs_header_sm.png" />
         </picture>
       </ImgContainer>
