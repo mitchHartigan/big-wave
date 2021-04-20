@@ -7,6 +7,7 @@ import controlPanelAnimation from "./_animationData/cbs_controlBoard_flat_data.j
 import elementAnimation from "./_animationData/element_illustration_data.json";
 import graphAnimation from "./_animationData/graph_illustration_animation_data.json";
 import ProductDetails from "./_ProductDetails/ProductDetails";
+import { ScrollToTopOnMount } from "components/ScrollToTopOnMount";
 
 const feature1 = {
   titleText: "Ensures Uniform Water Quality.",
@@ -72,6 +73,7 @@ export class ChloramineBoostingSystem extends React.Component {
   render() {
     return (
       <Container>
+        <ScrollToTopOnMount />
         <Header />
         <ProductFeature
           description={feature1}
