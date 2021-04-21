@@ -6,6 +6,7 @@ import "./index.css";
 
 import Homepage from "./pages/Homepage/index";
 import { ChloramineBoostingSystem } from "pages/Chloramine Boosting System";
+import { TidalWaveMixer } from "./pages/Tidal Wave Mixer/index";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
           </Route>
 
           <Route path="/tidalwavemixer">
-            <></>
+            <TidalWaveMixer />
           </Route>
 
           <Route path="/chloramineboostingsystem">

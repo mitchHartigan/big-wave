@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Lottie from "react-lottie";
 import VisibilitySensor from "react-visibility-sensor";
 import { Description } from "./_Description";
@@ -14,6 +14,7 @@ export class ProductFeature extends React.Component {
       windowSize: window.innerWidth,
       animationSize: 500,
       playAnimation: false,
+      animSizes: {},
     };
   }
 
@@ -23,22 +24,23 @@ export class ProductFeature extends React.Component {
   };
 
   // used when the component loads for the first time, and every time the window resizes.
-  _resizeAnimation = () => {
+  _resizeAnimation = (animSizes) => {
     const { windowSize } = this.state;
+    const { xl, lg, md, sm } = this.props.animSizes;
 
     if (windowSize >= 1600) {
-      this.setState({ animationSize: 500 });
+      this.setState({ animationSize: xl });
     }
 
     if (windowSize <= 1600 && windowSize >= 1200) {
-      this.setState({ animationSize: 450 });
+      this.setState({ animationSize: lg });
     }
 
     if (windowSize >= 600 && windowSize <= 1200) {
-      this.setState({ animationSize: 350 });
+      this.setState({ animationSize: md });
     }
     if (windowSize <= 600) {
-      this.setState({ animationSize: 300 });
+      this.setState({ animationSize: sm });
     }
   };
 
