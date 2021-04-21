@@ -26,34 +26,42 @@ export default class CallToAction extends React.Component {
     const { visible } = this.state;
 
     return (
-      <VisibilitySensor onChange={this._display}>
-        <Container>
-          <FadeIn delay="50" visible={visible}>
-            <Title spanWidth={"15vw"} size={"xl"}>
-              The Tidal Wave Mixer.
-            </Title>
-          </FadeIn>
+      <GridItemContainer>
+        <VisibilitySensor onChange={this._display}>
+          <Container>
+            <FadeIn delay="50" visible={visible}>
+              <Title spanWidth={"15vw"} size={"xl"}>
+                The Tidal Wave Mixer.
+              </Title>
+            </FadeIn>
 
-          <FadeIn delay="350" visible={visible}>
-            <Text>Lighter. Faster. Competitively Priced.</Text>
-          </FadeIn>
+            <FadeIn delay="350" visible={visible}>
+              <Text>Lighter. Faster. Competitively Priced.</Text>
+            </FadeIn>
 
-          <FadeIn delay="650" visible={visible}>
-            <CenterBlock>
-              <ScrollButton>View details</ScrollButton>
-            </CenterBlock>
-          </FadeIn>
-        </Container>
-      </VisibilitySensor>
+            <FadeIn delay="650" visible={visible}>
+              <CenterBlock>
+                <ScrollButton>View details</ScrollButton>
+              </CenterBlock>
+            </FadeIn>
+          </Container>
+        </VisibilitySensor>
+      </GridItemContainer>
     );
   }
 }
+
+const GridItemContainer = styled.div`
+  grid-column-start: 4;
+  grid-column-end: 5;
+  align-self: center;
+  justify-self: start;
+`;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 5vw;
 
   @media (max-width: 1100px) {
     margin: 3vh 0vw 0vw 0vw;
@@ -68,25 +76,8 @@ const Text = styled.p`
   color: ${(props) => props.theme.colors.darkBlue};
   width: 100%;
   -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 1300px) {
+    font-size: ${(props) => props.theme.text.xs};
+  }
 `;
-
-function _adaptTitleSize() {
-  let breakpoint = window.matchMedia("(max-width: 1200px)");
-
-  if (breakpoint.matches) {
-    // window is smaller than 800px.
-    console.log("breakpoin hit");
-    return "xl";
-  } else {
-    return "xxs";
-  }
-}
-
-const adaptSpanWidth = () => {
-  let breakpoint = window.matchMedia("(max-width: 1330px)");
-
-  if (breakpoint.matches) {
-    return "15vw";
-  }
-  return "6vw";
-};

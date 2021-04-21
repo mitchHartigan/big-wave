@@ -8,7 +8,7 @@ export const Header = () => {
       <ImgContainer>
         <picture>
           <source media="(min-width: 1600px)" srcSet="twm_header_lg.png" />
-          <source media="(min-width: 1300px)" srcSet="twm_header_md.png" />
+          <source media="(min-width: 1110px)" srcSet="twm_header_md.png" />
           <Image src="twm_header_sm.png" />
         </picture>
       </ImgContainer>
@@ -20,14 +20,15 @@ export const Header = () => {
 const Container = styled.div`
   height: 100vh;
   background-color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 15% 2fr 10% 2fr 15%;
   width: 100%;
 
   @media (max-width: 1100px) {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -36,9 +37,12 @@ const Image = styled.img`
 `;
 
 const ImgContainer = styled.div`
-  margin-right: 5vw;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  align-self: center;
+  justify-self: center;
 
   @media (max-width: 1100px) {
-    margin-right: 0vw;
+    margin-bottom: 5vh;
   }
 `;
