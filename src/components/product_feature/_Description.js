@@ -48,22 +48,13 @@ export const Description = (props) => {
 };
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 34vw;
-  margin: ${(props) => (props.swap ? "0vh 5vw 0vh 15vw" : "0vh 10vw 0vh 5vw")};
-  box-sizing: border-box;
+  grid-column: ${(props) => (props.swap ? "2/3" : "4/5")};
+  grid-row-start: 1;
+  justify-self: center;
+  align-self: center;
 
-  @media (max-width: 1330px) {
-    margin: 4vh 0vw 0vh 0vw;
-    max-width: none;
-    padding: 0vh 15vw 0vh 15vw;
-  }
-
-  @media (max-width: 800px) {
-    padding: 0vh 10vw 0vh 10vw;
+  @media (max-width: 1400px) {
+    max-width: 60%;
   }
 `;
 
@@ -81,7 +72,7 @@ const Subtext = styled.p`
     font-size: ${(props) => props.theme.text.xxs};
   }
 
-  @media (max-width: 1330px) {
+  @media (max-width: 1400px) {
     text-align: center;
     margin-top: 3vh;
   }
@@ -97,7 +88,7 @@ const TextContainer = styled.div`
 `;
 
 const adaptTitleAlignment = () => {
-  let breakpoint = window.matchMedia("(max-width: 1330px)");
+  let breakpoint = window.matchMedia("(max-width: 1400px)");
 
   if (breakpoint.matches) {
     // window is smaller than 1400px.
@@ -108,7 +99,7 @@ const adaptTitleAlignment = () => {
 };
 
 const adaptSpanWidth = () => {
-  let breakpoint = window.matchMedia("(max-width: 1330px)");
+  let breakpoint = window.matchMedia("(max-width: 1100px)");
 
   if (breakpoint.matches) {
     return "15vw";

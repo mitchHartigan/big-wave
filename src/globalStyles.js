@@ -7,6 +7,7 @@ export const globalStyles = {
     md: "22px",
     lg: "28px",
     xl: "40px",
+    xxl: "45px",
   },
   colors: {
     mainBlue: "#007fff",

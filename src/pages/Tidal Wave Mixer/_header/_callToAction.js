@@ -30,7 +30,7 @@ export default class CallToAction extends React.Component {
         <VisibilitySensor onChange={this._display}>
           <Container>
             <FadeIn delay="50" visible={visible}>
-              <Title spanWidth={"15vw"} size={"xl"}>
+              <Title spanWidth={"15vw"} size={"xxl"}>
                 The Tidal Wave Mixer.
               </Title>
             </FadeIn>

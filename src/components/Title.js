@@ -37,7 +37,9 @@ const Header = styled.h2`
 
   @media (max-width: 1300px) {
     font-size: ${(props) =>
-      props.size === "xl" ? props.theme.text.lg : props.theme.text[props.size]};
+      props.size === "xl" || props.size === "xxl"
+        ? props.theme.text.lg
+        : props.theme.text[props.size]};
   }
 
   @media (max-width: 800px) {

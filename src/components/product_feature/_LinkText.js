@@ -49,6 +49,7 @@ const Link = styled.a`
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text[props.size]};
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
 
   @media (max-width: 1400px) {
     font-size: ${(props) => props.theme.text.xxs};

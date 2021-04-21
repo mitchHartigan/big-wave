@@ -21,7 +21,7 @@ const Container = styled.div`
   height: 100vh;
   background-color: white;
   display: grid;
-  grid-template-columns: 15% 2fr 10% 2fr 15%;
+  grid-template-columns: 17.5% 25% 10% 42.5% 5%;
   width: 100%;
 
   @media (max-width: 1100px) {

@@ -31,10 +31,10 @@ const checklistAnimationSizes = {
 };
 
 const mixerAnimationSizes = {
-  xl: 450,
-  lg: 400,
-  md: 350,
-  sm: 300,
+  xl: 400,
+  lg: 350,
+  md: 300,
+  sm: 250,
 };
 
 const feature1 = {

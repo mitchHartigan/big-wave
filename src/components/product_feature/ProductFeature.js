@@ -84,10 +84,6 @@ export class ProductFeature extends React.Component {
     return (
       <VisibilitySensor onChange={this._display}>
         <Container swap={swap}>
-          {swap && (
-            <Description data={description} swap={swap} visible={visible} />
-          )}
-
           <AnimationContainer id="animationContainer" swap={swap}>
             <FadeIn delay="500" visible={visible}>
               <Lottie
@@ -99,9 +95,7 @@ export class ProductFeature extends React.Component {
             </FadeIn>
           </AnimationContainer>
 
-          {!swap && (
-            <Description data={description} swap={swap} visible={visible} />
-          )}
+          <Description data={description} swap={swap} visible={visible} />
         </Container>
       </VisibilitySensor>
     );
@@ -109,28 +103,28 @@ export class ProductFeature extends React.Component {
 }
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: grid;
+  grid-template-columns: ${(props) =>
+    props.swap ? "16% 35% 11% 25% 13%" : "16% 25% 11% 35% 13%"};
+  grid-template-rows: 100%;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   padding: 10vh 0vw 10vh 0vw;
 
-  @media (max-width: 1330px) {
+  @media (max-width: 1400px) {
+    display: flex;
     justify-content: center;
-    flex-direction: ${(props) => (props.swap ? "column-reverse" : "column")};
+    flex-direction: column;
   }
 `;
 
 const AnimationContainer = styled.div`
-  margin: ${(props) => (props.swap ? "0vh 17vw 0vh 5vw" : "0vh 5vw 0vh 15vw")};
-  @media (max-width: 1600px) {
-    margin: ${(props) =>
-      props.swap ? "0vh 10em 0vh 5vw" : "0vh 5vw 0vh 15vw"};
-  }
+  grid-column: ${(props) => (props.swap ? "4 / 5" : "2 / 3")};
+  align-self: center;
+  justify-self: ${(props) => (props.swap ? "center" : "center")};
 
-  @media (max-width: 1330px) {
-    margin: 0vh 0vw 2vh 0vw;
+  @media (max-width: 1400px) {
+    margin-bottom: 4vh;
   }
 `;
