@@ -9,13 +9,6 @@ import checklistAnimation from "./_animationData/checklist_animation_data.json";
 import gradientAnimation from "./_animationData/gradient_animation_data.json";
 import mixerAnimation from "./_animationData/tidal_wave_mixer_above_data.json";
 
-const animSizes = {
-  xl: 500,
-  lg: 450,
-  md: 350,
-  sm: 300,
-};
-
 const gradientAnimationSizes = {
   xl: 450,
   lg: 400,
@@ -109,6 +102,7 @@ export const TidalWaveMixer = () => {
         animSizes={mixerAnimationSizes}
       />
       <Navbar alwaysDisplay />
+      <ProductDetails />
     </Container>
   );
 };

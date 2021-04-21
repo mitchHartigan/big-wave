@@ -7,12 +7,12 @@ import { LinkButton } from "components/navigation/LinkButton";
 import { CenterBlock } from "components/CenterBlock";
 
 const bulletPoints = [
-  "Continuous measurement of water quality.",
-  "Control resevoir remotely.",
-  "Low power consumption.",
-  "Modularly designed, with solar options available.",
-  "Proven amperometric reagantless chlorine management.",
-  "Compatible with various different disinfection methods.",
+  "Performs in tanks of up to 10 million gallons or more.",
+  "Reduces Nitrification in chloraminated systems.",
+  "Reduces bacteria growth and lowers DBP's (disinfection by-products).",
+  "Helps prevent ice damage in cold climates.",
+  "Lowered through hatch, no diver required.",
+  "Exceeds mixing requirements for addition to chemistry.",
 ];
 
 export default class ProductDetails extends Component {
@@ -23,8 +23,9 @@ export default class ProductDetails extends Component {
           <DetailsContainer>
             <Title size="lg">Product Details</Title>
             <Text>
-              The CBS was designed to be an easy to use secondary disinfection
-              boost system, that significantly improves water quality.
+              The Tidal Wave Mixer was designed to vastly improve water quality
+              and storage tank longevity. Some of the key features of the mixer
+              include:
             </Text>
             <FeaturesContainer>
               <ProductDetailsImage />
@@ -32,8 +33,8 @@ export default class ProductDetails extends Component {
             </FeaturesContainer>
           </DetailsContainer>
           <Text>
-            Wondering if the Chloramine Boosting System is the right solution
-            for your tank?
+            Wondering if the Tidal Wave Mixer is the right solution for your
+            tank?
           </Text>
           <CenterBlock>
             <LinkButton to="/">Get in touch with us</LinkButton>

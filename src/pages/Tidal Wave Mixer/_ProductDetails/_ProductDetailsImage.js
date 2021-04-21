@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const ProductDetailsImage = () => {
   return (
     <Picture>
-      <source media="(min-width: 1700px)" srcSet="cbs_productDetails_lg.png" />
-      <Image src="cbs_productDetails_md.png" />
+      <source media="(min-width: 1700px)" srcSet="tws_productDetails_lg.png" />
+      <Image src="tws_productDetails_md.png" />
     </Picture>
   );
 };
@@ -15,7 +15,7 @@ const Image = styled.img`
 `;
 
 const Picture = styled.picture`
-  margin: 0vh 0vw 2vh 5vw;
+  margin: 0vh 0vw 2vh 8vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
