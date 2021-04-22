@@ -45,7 +45,7 @@ const Container = styled.div`
   z-index: 10;
   box-sizing: border-box;
   cursor: pointer;
-  box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 1230px) {
     display: flex;
@@ -56,6 +56,6 @@ const Container = styled.div`
 const Line = styled.div`
   width: 80%;
   min-height: 3px;
-  background-color: ${(props) => props.theme.colors.mainBlue};
+  background-color: ${(props) => props.theme.colors.darkBlue};
   margin: 4px 0px 4px 0px;
 `;
