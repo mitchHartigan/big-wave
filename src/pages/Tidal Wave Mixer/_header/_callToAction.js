@@ -17,7 +17,6 @@ export default class CallToAction extends React.Component {
 
   _display = (visibile) => {
     if (visibile) {
-      console.log("should be visible");
       this.setState({ visible: true });
     }
   };

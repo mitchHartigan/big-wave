@@ -1,21 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import CallToAction from "./_callToAction";
+import { FadeIn } from "components/FadeIn";
 
-export const Header = () => {
-  return (
-    <Container>
-      <ImgContainer>
-        <picture>
-          <source media="(min-width: 1600px)" srcSet="twm_header_lg.png" />
-          <source media="(min-width: 1110px)" srcSet="twm_header_md.png" />
-          <Image src="twm_header_sm.png" />
-        </picture>
-      </ImgContainer>
-      <CallToAction />
-    </Container>
-  );
-};
+export class Header extends React.Component {
+  render() {
+    return (
+      <FadeIn visible={true} delay="70">
+        <Container>
+          <ImgContainer>
+            <picture>
+              <source media="(min-width: 1600px)" srcSet="twm_header_lg.png" />
+              <source media="(min-width: 1110px)" srcSet="twm_header_md.png" />
+              <Image src="twm_header_sm.png" />
+            </picture>
+          </ImgContainer>
+          <CallToAction />
+        </Container>
+      </FadeIn>
+    );
+  }
+}
 
 const Container = styled.div`
   height: 100vh;

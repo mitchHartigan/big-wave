@@ -34,7 +34,6 @@ export default class ProductDetails extends Component {
 
   render() {
     const { visible } = this.state;
-    const { description, image, bullets, question } = this.props;
 
     return (
       <FadeIn visible={visible}>

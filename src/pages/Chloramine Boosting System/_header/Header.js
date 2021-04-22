@@ -1,19 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import CallToAction from "./_callToAction";
+import { FadeIn } from "components/FadeIn";
 
 export const Header = () => {
   return (
-    <Container>
-      <ImgContainer>
-        <picture>
-          <source media="(min-width: 1600px)" srcSet="cbs_header_lg.png" />
-          <source media="(min-width: 1300px)" srcSet="cbs_header_md.png" />
-          <Image src="cbs_header_sm.png" />
-        </picture>
-      </ImgContainer>
-      <CallToAction />
-    </Container>
+    <FadeIn visible delay="50">
+      <Container>
+        <ImgContainer>
+          <picture>
+            <source media="(min-width: 1600px)" srcSet="cbs_header_lg.png" />
+            <source media="(min-width: 1300px)" srcSet="cbs_header_md.png" />
+            <Image src="cbs_header_sm.png" />
+          </picture>
+        </ImgContainer>
+        <CallToAction />
+      </Container>
+    </FadeIn>
   );
 };
 
