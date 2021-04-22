@@ -5,6 +5,8 @@ import { ProductDetailsImage } from "./_ProductDetailsImage";
 import { Bullets } from "./_Bullets/Bullets";
 import { LinkButton } from "components/navigation/LinkButton";
 import { CenterBlock } from "components/CenterBlock";
+import { FadeIn } from "components/FadeIn";
+import VisibilitySensor from "react-visibility-sensor";
 
 const bulletPoints = [
   "Performs in tanks of up to 10 million gallons or more.",
@@ -16,29 +18,50 @@ const bulletPoints = [
 ];
 
 export default class ProductDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: false,
+    };
+  }
+
+  _display = (visible) => {
+    if (visible) {
+      this.setState({ visible: true });
+    }
+  };
+
   render() {
+    const { visible } = this.state;
+    const { description, image, bullets, question } = this.props;
+
     return (
-      <Container>
-        <Card id="scrollTarget">
-          <Title size="lg">Product Details</Title>
-          <Text>
-            The Tidal Wave Mixer was designed to vastly improve water quality
-            and storage tank longevity. Some of the key features of the mixer
-            include:
-          </Text>
-          <FeaturesContainer>
-            <ProductDetailsImage />
-            <Bullets points={bulletPoints} />
-          </FeaturesContainer>
-          <Text>
-            Wondering if the Tidal Wave Mixer is the right solution for your
-            tank?
-          </Text>
-          <CenterBlock>
-            <LinkButton to="/">Get in touch with us</LinkButton>
-          </CenterBlock>
-        </Card>
-      </Container>
+      <FadeIn visible={visible}>
+        <Container>
+          <Card id="scrollTarget">
+            <VisibilitySensor onChange={this._display}>
+              <Title size="lg">Product Details</Title>
+            </VisibilitySensor>
+            <Text>
+              The Tidal Wave Mixer was designed to vastly improve water quality
+              and storage tank longevity. Some of the key features of the mixer
+              include:
+            </Text>
+            <FeaturesContainer>
+              <ProductDetailsImage />
+              <Bullets points={bulletPoints} />
+            </FeaturesContainer>
+            <Text>
+              Wondering if the Tidal Wave Mixer is the right solution for your
+              tank?
+            </Text>
+            <CenterBlock>
+              <LinkButton to="/">Get in touch with us</LinkButton>
+            </CenterBlock>
+          </Card>
+        </Container>
+      </FadeIn>
     );
   }
 }

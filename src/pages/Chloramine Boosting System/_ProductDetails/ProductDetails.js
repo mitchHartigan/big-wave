@@ -5,6 +5,8 @@ import { ProductDetailsImage } from "./_ProductDetailsImage";
 import { Bullets } from "./_Bullets/Bullets";
 import { LinkButton } from "components/navigation/LinkButton";
 import { CenterBlock } from "components/CenterBlock";
+import VisibilitySensor from "react-visibility-sensor";
+import { FadeIn } from "components/FadeIn";
 
 const bulletPoints = [
   "Continuous measurement of water quality.",
@@ -16,30 +18,50 @@ const bulletPoints = [
 ];
 
 export default class ProductDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: false,
+    };
+  }
+
+  _display = (visible) => {
+    if (visible) {
+      this.setState({ visible: true });
+    }
+  };
+
   render() {
+    const { visible } = this.state;
+
     return (
-      <Container>
-        <Card id="scrollTarget">
-          <DetailsContainer>
-            <Title size="lg">Product Details</Title>
+      <FadeIn visible={visible}>
+        <Container>
+          <Card id="scrollTarget">
+            <DetailsContainer>
+              <VisibilitySensor onChange={this._display}>
+                <Title size="lg">Product Details</Title>
+              </VisibilitySensor>
+              <Text>
+                The CBS was designed to be an easy to use secondary disinfection
+                boost system, that significantly improves water quality.
+              </Text>
+              <FeaturesContainer>
+                <ProductDetailsImage />
+                <Bullets points={bulletPoints} />
+              </FeaturesContainer>
+            </DetailsContainer>
             <Text>
-              The CBS was designed to be an easy to use secondary disinfection
-              boost system, that significantly improves water quality.
+              Wondering if the Chloramine Boosting System is the right solution
+              for your tank?
             </Text>
-            <FeaturesContainer>
-              <ProductDetailsImage />
-              <Bullets points={bulletPoints} />
-            </FeaturesContainer>
-          </DetailsContainer>
-          <Text>
-            Wondering if the Chloramine Boosting System is the right solution
-            for your tank?
-          </Text>
-          <CenterBlock>
-            <LinkButton to="/">Get in touch with us</LinkButton>
-          </CenterBlock>
-        </Card>
-      </Container>
+            <CenterBlock>
+              <LinkButton to="/">Get in touch with us</LinkButton>
+            </CenterBlock>
+          </Card>
+        </Container>
+      </FadeIn>
     );
   }
 }
