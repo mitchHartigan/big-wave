@@ -15,14 +15,9 @@ const Image = styled.img`
 `;
 
 const Picture = styled.picture`
-  margin: 0vh 0vw 2vh 8vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media (max-width: 1600px) {
-    margin-left: 5vw;
-  }
+  grid-column: 1 / 2;
+  justify-self: end;
+  align-self: center;
 `;
 
 // small image needs to render in at 800px.

@@ -101,8 +101,8 @@ export const TidalWaveMixer = () => {
         animSpeed={1}
         animSizes={mixerAnimationSizes}
       />
-      <Navbar alwaysDisplay />
       <ProductDetails />
+      <Navbar alwaysDisplay />
     </Container>
   );
 };

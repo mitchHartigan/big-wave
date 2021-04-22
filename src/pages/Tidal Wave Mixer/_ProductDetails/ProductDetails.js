@@ -20,18 +20,16 @@ export default class ProductDetails extends Component {
     return (
       <Container>
         <Card id="scrollTarget">
-          <DetailsContainer>
-            <Title size="lg">Product Details</Title>
-            <Text>
-              The Tidal Wave Mixer was designed to vastly improve water quality
-              and storage tank longevity. Some of the key features of the mixer
-              include:
-            </Text>
-            <FeaturesContainer>
-              <ProductDetailsImage />
-              <Bullets points={bulletPoints} />
-            </FeaturesContainer>
-          </DetailsContainer>
+          <Title size="lg">Product Details</Title>
+          <Text>
+            The Tidal Wave Mixer was designed to vastly improve water quality
+            and storage tank longevity. Some of the key features of the mixer
+            include:
+          </Text>
+          <FeaturesContainer>
+            <ProductDetailsImage />
+            <Bullets points={bulletPoints} />
+          </FeaturesContainer>
           <Text>
             Wondering if the Tidal Wave Mixer is the right solution for your
             tank?
@@ -49,7 +47,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 2vh 15vw 2vh 15vw;
+  padding: 2vh 0vw 2vh 0vw;
 
   @media (max-width: 1400px) {
     padding: 2vh 5vw 2vh 5vw;
@@ -57,41 +55,34 @@ const Container = styled.div`
 `;
 
 const Card = styled.div`
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  width: 100%;
   padding: 4vh 0vw 4vh 0vw;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1400px) {
     padding: 2vh 4vw 3vh 4vw;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    padding: 4vh 5vw 4vh 5vw;
   }
 `;
 
 const FeaturesContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 2vh 0vw 1vh 0vw;
+  display: grid;
+  grid-template-columns: 45% 5% 50%;
+  width: 100%;
 
   @media (max-width: 1400px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-`;
-
-const DetailsContainer = styled.div`
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media (max-width: 800px) {
-    width: 100%;
   }
 `;
 

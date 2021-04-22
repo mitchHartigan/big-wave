@@ -15,8 +15,11 @@ export const Bullets = (props) => {
 };
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0vh 0vw 0vh 0vw;
-  align-items: flex-start;
+  grid-column: 3 / 4;
+  justify-self: start;
+  align-self: center;
+
+  @media (max-width: 1400px) {
+    margin-top: 2vh;
+  }
 `;
