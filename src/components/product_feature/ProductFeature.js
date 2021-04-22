@@ -82,22 +82,25 @@ export class ProductFeature extends React.Component {
     };
 
     return (
-      <VisibilitySensor onChange={this._display}>
-        <Container swap={swap}>
-          <AnimationContainer id="animationContainer" swap={swap}>
-            <FadeIn delay="500" visible={visible}>
-              <Lottie
-                options={defaultOptions}
-                width={animationSize}
-                isStopped={!playAnimation}
-                speed={animSpeed}
-              />
-            </FadeIn>
-          </AnimationContainer>
+      <Container swap={swap}>
+        <AnimationContainer id="animationContainer" swap={swap}>
+          <FadeIn delay="500" visible={visible}>
+            <Lottie
+              options={defaultOptions}
+              width={animationSize}
+              isStopped={!playAnimation}
+              speed={animSpeed}
+            />
+          </FadeIn>
+        </AnimationContainer>
 
-          <Description data={description} swap={swap} visible={visible} />
-        </Container>
-      </VisibilitySensor>
+        <Description
+          data={description}
+          swap={swap}
+          visible={visible}
+          toggleVisible={this._display}
+        />
+      </Container>
     );
   }
 }

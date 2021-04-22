@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Title } from "components/Title";
 import { FadeIn } from "components/FadeIn";
 import { LinkText } from "./_LinkText";
+import VisibilitySensor from "react-visibility-sensor";
 
 /**
  * @param props
@@ -22,18 +23,20 @@ export const Description = (props) => {
     link,
     href,
   } = props.data;
-  const { swap, visible } = props;
+  const { swap, visible, toggleVisible } = props;
 
   return (
     <Container swap={swap}>
       <FadeIn delay="0" visible={visible}>
-        <Title
-          spanWidth={adaptSpanWidth}
-          alignTitle="flex-start"
-          styles={adaptTitleAlignment}
-        >
-          {titleText}
-        </Title>
+        <VisibilitySensor onChange={toggleVisible}>
+          <Title
+            spanWidth={adaptSpanWidth}
+            alignTitle="flex-start"
+            styles={adaptTitleAlignment}
+          >
+            {titleText}
+          </Title>
+        </VisibilitySensor>
       </FadeIn>
       <FadeIn delay="250" visible={visible}>
         <TextContainer>
