@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavLink = (props) => {
-  const { children, route, override } = props;
+  const { children, route, override, width, align, styles } = props;
 
   return (
-    <Container>
+    <Container width={width} align={align} styles={styles}>
       <Link to={route} style={{ textDecoration: "none" }}>
         <Text style={override}>{children}</Text>
       </Link>
@@ -31,8 +31,9 @@ const Text = styled.button`
 `;
 
 const Container = styled.div`
-  width: 20%;
+  width: ${(props) => props.width};
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: ${(props) => (props.align ? props.align : "center")};
+  ${(props) => props.styles}
 `;

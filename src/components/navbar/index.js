@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "./NavLink";
 import { Logo } from "./_Logo";
 import styled from "styled-components";
+import { Hamburger } from "./_Hamburger";
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -27,19 +28,24 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <Container>
+        <Hamburger />
         <Navbar_
           scrollPos={this.state.scrollPos}
           alwaysDisplay={this.props.alwaysDisplay}
         >
-          <NavLink route="/" exact>
+          <NavLink route="/" exact width="20%">
             Contact Us
           </NavLink>
-          <NavLink route="/casestudies">Case Studies</NavLink>
+          <NavLink route="/casestudies" width="20%">
+            Case Studies
+          </NavLink>
           <Logo />
-          <NavLink route="/chloramineboostingsystem">
+          <NavLink route="/chloramineboostingsystem" width="20%">
             Chloramine Boosting System
           </NavLink>
-          <NavLink route="/tidalwavemixer">Tidal Wave Mixer</NavLink>
+          <NavLink route="/tidalwavemixer" width="20%">
+            Tidal Wave Mixer
+          </NavLink>
         </Navbar_>
       </Container>
     );
@@ -78,6 +84,10 @@ const Navbar_ = styled.div.attrs((props) => ({
   @media (max-width: 1600px) {
     width: 90%;
   }
+
+  @media (max-width: 1230px) {
+    display: none;
+  }
 `;
 
 const Container = styled.div`
@@ -86,4 +96,8 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
+
+  @media (max-width: 1230px) {
+    justify-content: flex-start;
+  }
 `;
