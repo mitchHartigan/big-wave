@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from 'components/navbar/index'
+import Navbar from "components/navbar/index";
 import { Description } from "./_description/index";
 import Contact from "./_contact/index";
+import { Footer } from "components/Footer";
 
 export default function Homepage() {
   return (
@@ -11,6 +12,7 @@ export default function Homepage() {
       <HeaderFiller />
       <Description />
       <Contact />
+      <Footer />
     </Container>
   );
 }

@@ -8,6 +8,7 @@ import elementAnimation from "./_animationData/element_illustration_data.json";
 import graphAnimation from "./_animationData/graph_illustration_animation_data.json";
 import ProductDetails from "./_ProductDetails/ProductDetails";
 import { ScrollToTopOnMount } from "components/ScrollToTopOnMount";
+import { Footer } from "components/Footer";
 
 const animSizes = {
   xl: 500,
@@ -103,6 +104,7 @@ export class ChloramineBoostingSystem extends React.Component {
           animSizes={animSizes}
         />
         <ProductDetails />
+        <Footer />
         <Navbar alwaysDisplay />
       </Container>
     );
