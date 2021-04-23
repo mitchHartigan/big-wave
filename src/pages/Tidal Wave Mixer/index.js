@@ -8,6 +8,7 @@ import { ScrollToTopOnMount } from "components/ScrollToTopOnMount";
 import checklistAnimation from "./_animationData/checklist_animation_data.json";
 import gradientAnimation from "./_animationData/gradient_animation_data.json";
 import mixerAnimation from "./_animationData/tidal_wave_mixer_above_data.json";
+import { TechnicalSpecs } from "./_technicalSpecs/_TechnicalSpecs";
 import { Footer } from "components/Footer";
 
 const gradientAnimationSizes = {
@@ -103,6 +104,7 @@ export const TidalWaveMixer = () => {
         animSizes={mixerAnimationSizes}
       />
       <ProductDetails />
+      <TechnicalSpecs />
       <Footer />
       <Navbar alwaysDisplay />
     </Container>

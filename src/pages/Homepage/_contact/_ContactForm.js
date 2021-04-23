@@ -81,5 +81,3 @@ export default class ContactForm extends Component {
     );
   }
 }
-
-const FormDescription = styled.p``;

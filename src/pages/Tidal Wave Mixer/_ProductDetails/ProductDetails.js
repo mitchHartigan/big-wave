@@ -82,7 +82,7 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 3px 9px 2px rgba(0, 0, 0, 0.13);
   padding: 4vh 0vw 4vh 0vw;
 
   @media (max-width: 1400px) {
