@@ -39,7 +39,7 @@ const Label = styled.p`
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text.xs};
   color: ${(props) => props.theme.colors.darkBlue};
-  margin: 10px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
 
   @media (max-width: 700px) {
     font-size: ${(props) => props.theme.text.xxs};

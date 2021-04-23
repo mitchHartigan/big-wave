@@ -25,17 +25,27 @@ export default class ContactForm extends Component {
   handleUpdate = (evt) => {
     const { name, value } = evt.target;
 
-    this.setState({ [name]: value }, () => {});
+    this.setState({ [name]: value });
   };
 
   validateForm = () => {
     const { name, email, message } = this.state;
 
-    this.setState({
-      invalidName: name === "",
-      invalidEmail: email === "",
-      invalidMessage: message === "",
-    });
+    this.setState(
+      {
+        invalidName: name === "",
+        invalidEmail: email === "",
+        invalidMessage: message === "",
+      },
+      () => {
+        const { invalidName, invalidEmail, invalidMessage } = this.state;
+
+        if ((!invalidName, !invalidEmail, !invalidMessage)) {
+          // post form.
+          console.log("form is valid and ready to be posted.");
+        }
+      }
+    );
   };
 
   render() {

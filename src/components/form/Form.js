@@ -13,7 +13,7 @@ const _Form = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 35vw;
+  width: 40vw;
   min-width: 600px;
   background-color: white;
   box-shadow: 2px 3px 11px 5px rgba(0, 0, 0, 0.13);

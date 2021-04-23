@@ -28,6 +28,10 @@ const Container = styled.div`
   flex-direction: column;
   grid-column: 4 / 5;
   align-self: center;
+
+  @media (max-width: 1350px) {
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -38,6 +42,10 @@ const Title = styled.h1`
   margin-bottom: 7px;
   font-weight: normal;
   text-align: left;
+
+  @media (max-width: 1350px) {
+    text-align: center;
+  }
 `;
 
 const Underline = styled.span`
@@ -69,4 +77,13 @@ const Paragraph = styled.p`
   text-align: left;
   line-height: 28px;
   max-width: 40vw;
+
+  @media (max-width: 1350px) {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  @media (max-width: 700px) {
+    width: 90%;
+  }
 `;

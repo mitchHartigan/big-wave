@@ -4,6 +4,7 @@ import { Header } from "./_header/Header";
 import Navbar from "components/navbar/index";
 import styled from "styled-components";
 import { Gallery } from "./gallery/Gallery";
+import { Footer } from "components/Footer";
 
 export const CaseStudies = () => {
   return (
@@ -11,6 +12,7 @@ export const CaseStudies = () => {
       <ScrollToTopOnMount />
       <Header />
       <Gallery />
+      <Footer />
       <Navbar alwaysDisplay />
     </Container>
   );
