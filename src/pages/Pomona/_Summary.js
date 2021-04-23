@@ -53,6 +53,7 @@ const Subtitle = styled.p`
   color: ${(props) => props.theme.colors.darkBlue};
   -webkit-font-smoothing: antialiased;
   margin-bottom: 7px;
+  margin-top: 7px;
   font-weight: normal;
   text-align: left;
   font-style: italic;

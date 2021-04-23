@@ -29,7 +29,7 @@ const caseStudies = [
 
 export const Gallery = () => {
   return (
-    <Container>
+    <Container id="scrollTarget">
       {caseStudies.map((study) => {
         const { title, backgroundImage, link } = study;
         return (

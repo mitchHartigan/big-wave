@@ -3,13 +3,15 @@ import styled from "styled-components";
 import { ScrollToTopOnMount } from "components/ScrollToTopOnMount";
 import Navbar from "components/navbar/index";
 import { Header } from "./_Header";
+import { Footer } from "components/Footer";
 
 export const Pomona = () => {
   return (
     <Container>
       <ScrollToTopOnMount />
-      <Navbar alwaysDisplay />
       <Header />
+      {/* <Footer /> */}
+      <Navbar alwaysDisplay />
     </Container>
   );
 };
