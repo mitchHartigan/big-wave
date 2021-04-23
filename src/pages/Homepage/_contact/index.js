@@ -15,7 +15,7 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <Container>
+      <Container id="scrollTarget">
         <Title size="lg">Contact</Title>
         <DescriptionText alignment="center">
           We’d love to hear from you. Reach out via phone or email:
@@ -67,7 +67,7 @@ const DescriptionText = styled.p`
   line-height: 30px;
 
   @media (max-width: 700px) {
-    font-size: ${props => props.theme.text.xxs};
+    font-size: ${(props) => props.theme.text.xxs};
     margin-bottom: 2vh;
   }
 `;

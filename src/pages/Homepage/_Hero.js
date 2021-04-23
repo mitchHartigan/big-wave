@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FadeIn } from "components/FadeIn";
+import { Link } from "react-scroll";
 
 export const Hero = () => {
   return (
@@ -15,7 +16,16 @@ export const Hero = () => {
         <Subtitle>That's our guarantee here at Big Wave.</Subtitle>
       </FadeIn>
       <FadeIn visible delay="450">
-        <Button>Get in touch</Button>
+        <Link
+          to="scrollTarget"
+          spy={true}
+          offset={-150}
+          delay={0}
+          duration={1300}
+          smooth={true}
+        >
+          <Button>Get in touch</Button>
+        </Link>
       </FadeIn>
     </Container>
   );
