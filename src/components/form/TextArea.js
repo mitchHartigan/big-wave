@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 export const TextArea = (props) => {
+  const { label, onChange, invalid, name } = props;
+
   return (
     <Container>
-      <Label>{props.label}</Label>
-      <_TextArea onChange={props.handleChange} />
+      <Label>{label}</Label>
+      <_TextArea name={name} onChange={onChange} invalid={invalid} />
+      <ErrorMessage invalid={invalid}>Please complete this field.</ErrorMessage>
     </Container>
   );
 };
@@ -15,7 +18,8 @@ const _TextArea = styled.textarea`
   padding: 5px 5px 5px 5px;
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text.xs};
-  border: 1px solid ${(props) => props.theme.colors.darkBlue};
+  border: 1px solid ${(props) =>
+    props.invalid ? "red" : props.theme.colors.darkBlue};
   outline: none;
   width: 100%;
   box-sizing: border-box;
@@ -27,7 +31,7 @@ const _TextArea = styled.textarea`
   }
 
   @media (max-width: 700px) {
-    font-size: ${props => props.theme.text.xxs};
+    font-size: ${(props) => props.theme.text.xxs};
   }
 `;
 
@@ -38,18 +42,26 @@ const Label = styled.p`
   margin: 10px 0px 10px 0px;
 
   @media (max-width: 700px) {
-    font-size: ${props => props.theme.text.xxs};
+    font-size: ${(props) => props.theme.text.xxs};
   }
+`;
+
+const ErrorMessage = styled.p`
+  color: red;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.text.xs};
+  margin-top: 10px;
+  visibility: ${(props) => (props.invalid ? "visible" : "hidden")};
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px 0px 20px 0px;
-  margin-bottom: 10px;
+  padding: 10px 0px 0px 0px;
+  margin-bottom: 20px;
 
   @media (max-width: 700px) {
-    margin-bottom: 4vh; 
+    margin-bottom: 4vh;
     padding: 1vh 0px 1vh 0px;
   }
 `;
