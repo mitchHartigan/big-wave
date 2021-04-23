@@ -26,15 +26,11 @@ const Container = styled.div`
 
 const Name = styled.p`
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text.sm};
+  font-size: ${(props) => props.theme.text.xs};
   text-align: right;
   width: 100%;
   color: ${(props) => props.theme.colors.darkBlue};
   margin-bottom: 7px;
-
-  @media (max-width: 1430px) {
-    font-size: ${(props) => props.theme.text.xs};
-  }
 
   @media (max-width: 1270px) {
     font-size: ${(props) => props.theme.text.xxs};
@@ -54,15 +50,11 @@ const NameContainer = styled.div`
 
 const Description = styled.p`
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text.sm};
+  font-size: ${(props) => props.theme.text.xs};
   text-align: left;
   width: 100%;
   color: ${(props) => props.theme.colors.darkBlue};
   margin-bottom: 7px;
-
-  @media (max-width: 1430px) {
-    font-size: ${(props) => props.theme.text.xs};
-  }
 
   @media (max-width: 1270px) {
     font-size: ${(props) => props.theme.text.xxs};

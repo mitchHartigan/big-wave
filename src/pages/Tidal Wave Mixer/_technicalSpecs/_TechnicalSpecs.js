@@ -2,50 +2,79 @@ import React from "react";
 import styled from "styled-components";
 import { Spec } from "./_Spec";
 import { Title } from "components/Title";
+import VisibilitySensor from "react-visibility-sensor";
+import { FadeIn } from "components/FadeIn";
 
-export const TechnicalSpecs = () => {
-  return (
-    <Container>
-      <Card>
-        <Title
-          size="xl"
-          align="center"
-          spanWidth="14.5vw"
-          styles={TitleStylesOverride}
-        >
-          Technical Specifications
-        </Title>
-        <Spec name="Control Center Power:">
-          120 VAC / 1Ph / 60Hz, 20 amp circuit
-        </Spec>
-        <Spec name="Motor Type:">
-          NSF 61, 1.5HP, 230 VAC, water-filled, water-lubricated
-        </Spec>
-        <Spec name="RPM:">2500</Spec>
-        <Spec name="Power Draw:">14 amps, 1800 watts</Spec>
-        <Spec name="Footprint Diameter:">23" (58.42 cm)</Spec>
-        <Spec name="Height:">30.75” (78.10 cm)</Spec>
+export class TechnicalSpecs extends React.Component {
+  constructor(props) {
+    super(props);
 
-        <Spec name="Mixer Assembly Weight:">35 lbs. (15.87 kg)</Spec>
-        <Spec name="Control Center Dimensions:">
-          40 lbs. (18.14 kg) (20” x 16” x 6” / 50.8 cm x 40.64 cm x 15.24 cm)
-        </Spec>
-        <Spec name="Control Center Material:">
-          Powder-coated steel, Type 3R enclosure
-        </Spec>
-        <Spec name="Stand Material:">HDPE</Spec>
-        <Spec name="Motor Seals Material:">
-          Chlorine/chloramine-resistant NBR rubber
-        </Spec>
-        <Spec name="Wiring:">NSF 61 & UL-listed submersible pump cable</Spec>
-        <Spec name="Installation Equipment:">316 Stainless Steel Chain</Spec>
-        <DownloadButton href="#" target="_blank">
-          Download the full Tidal Wave Mixer Specifications (PDF).
-        </DownloadButton>
-      </Card>
-    </Container>
-  );
-};
+    this.state = {
+      visible: false,
+    };
+  }
+
+  _display = (visible) => {
+    if (visible) {
+      this.setState({ visible: true });
+    }
+  };
+
+  render() {
+    const { visible } = this.state;
+
+    return (
+      <FadeIn visible={visible}>
+        <Container>
+          <Card>
+            <VisibilitySensor onChange={this._display}>
+              <Title
+                size="xl"
+                align="center"
+                spanWidth="14.5vw"
+                styles={TitleStylesOverride}
+              >
+                Technical Specifications
+              </Title>
+            </VisibilitySensor>
+            <Spec name="Control Center Power:">
+              120 VAC / 1Ph / 60Hz, 20 amp circuit
+            </Spec>
+            <Spec name="Motor Type:">
+              NSF 61, 1.5HP, 230 VAC, water-filled, water-lubricated
+            </Spec>
+            <Spec name="RPM:">2500</Spec>
+            <Spec name="Power Draw:">14 amps, 1800 watts</Spec>
+            <Spec name="Footprint Diameter:">23" (58.42 cm)</Spec>
+            <Spec name="Height:">30.75” (78.10 cm)</Spec>
+
+            <Spec name="Mixer Assembly Weight:">35 lbs. (15.87 kg)</Spec>
+            <Spec name="Control Center Dimensions:">
+              40 lbs. (18.14 kg) (20” x 16” x 6” / 50.8 cm x 40.64 cm x 15.24
+              cm)
+            </Spec>
+            <Spec name="Control Center Material:">
+              Powder-coated steel, Type 3R enclosure
+            </Spec>
+            <Spec name="Stand Material:">HDPE</Spec>
+            <Spec name="Motor Seals Material:">
+              Chlorine/chloramine-resistant NBR rubber
+            </Spec>
+            <Spec name="Wiring:">
+              NSF 61 & UL-listed submersible pump cable
+            </Spec>
+            <Spec name="Installation Equipment:">
+              316 Stainless Steel Chain
+            </Spec>
+            <DownloadButton href="#" target="_blank">
+              Download the full Tidal Wave Mixer Specifications (PDF).
+            </DownloadButton>
+          </Card>
+        </Container>
+      </FadeIn>
+    );
+  }
+}
 
 const TitleStylesOverride = {
   marginBottom: "4vh",
