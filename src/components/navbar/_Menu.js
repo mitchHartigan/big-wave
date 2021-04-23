@@ -48,6 +48,12 @@ const LinkMarginOverride = {
   margin: "10px 0px 10px 0px;",
 };
 
+const BlurContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+`;
+
 const Container = styled.div`
   position: fixed;
   display: flex
