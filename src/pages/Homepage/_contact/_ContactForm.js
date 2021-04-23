@@ -68,6 +68,7 @@ export default class ContactForm extends Component {
           onChange={this.handleUpdate}
           invalid={invalidEmail}
         />
+        <Input label="Phone Number" name="phone" onChange={this.handleUpdate} />
         <TextArea
           label="Message *"
           name="message"

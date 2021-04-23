@@ -15,7 +15,7 @@ const Image = styled.img`
 `;
 
 const Picture = styled.picture`
-  margin: 0vh 0vw 2vh 5vw;
+  margin: 0vh 0vw 2vh 8vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

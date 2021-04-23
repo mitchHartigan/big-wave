@@ -20,7 +20,7 @@ export const ProductCard = (props) => {
   return (
     <Container>
       <Image src={props.imgURL} alt={props.imgAlt} />
-      <Title size="md">{props.title}</Title>
+      <Title size="md" >{props.title}</Title>
       <Subtext alignment="center" size="xs">
         {props.text}
       </Subtext>
