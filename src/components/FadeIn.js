@@ -34,5 +34,4 @@ const FadeWrapper = styled.div`
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-delay: ${(props) => props.delay}ms;
-  width: 100%;
 `;
