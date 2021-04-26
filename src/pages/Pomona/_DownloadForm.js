@@ -1,5 +1,6 @@
 import React from "react";
 import { Form } from "components/form/Form";
+import { Success } from "components/form/Success";
 import { Input } from "components/form/Input";
 import { TextArea } from "components/form/TextArea";
 import { Button } from "components/Button";
@@ -7,6 +8,7 @@ import { Subtext } from "components/Subtext";
 import { Title } from "components/Title";
 import { CenterBlock } from "components/CenterBlock";
 import styled from "styled-components";
+import { POST_DOWNLOAD_FORM } from "components/API";
 
 export class DownloadForm extends React.Component {
   constructor(props) {
@@ -20,6 +22,7 @@ export class DownloadForm extends React.Component {
       invalidName: false,
       invalidEmail: false,
       invalidPhone: false,
+      submitted: false,
     };
   }
 
@@ -29,7 +32,8 @@ export class DownloadForm extends React.Component {
   };
 
   validateForm = () => {
-    const { name, email, phone } = this.state;
+    const { name, email, phone, questions } = this.state;
+    const { study } = this.props;
 
     this.setState(
       {
@@ -37,56 +41,77 @@ export class DownloadForm extends React.Component {
         invalidEmail: email === "",
         invalidPhone: phone === "",
       },
-      () => {
+      async () => {
         const { invalidName, invalidEmail, invalidPhone } = this.state;
 
         if ((!invalidName, !invalidEmail, !invalidPhone)) {
           // post form.
-          console.log("form is valid and ready for submission");
+          const payload = {
+            name: name,
+            email: email,
+            phone: phone,
+            message: questions,
+            study: study,
+          };
+
+          const submission = await POST_DOWNLOAD_FORM(payload);
+          console.log("submission:", submission);
+
+          if (submission === "success") {
+            this.setState({ submitted: true });
+          }
         }
       }
     );
   };
 
   render() {
-    const { invalidName, invalidEmail, invalidPhone } = this.state;
+    const { invalidName, invalidEmail, invalidPhone, submitted } = this.state;
 
     return (
       <Container>
-        <Form>
-          <Title size="lg" align="center" styles={TitleStylesOverride}>
-            Download Study
-          </Title>
-          <Subtext alignment="center" styles="margin-bottom: 3vh">
-            Request to view and download this study by filling out this form.
-          </Subtext>
-          <Input
-            label="Full Name *"
-            name="name"
-            onChange={this.handleUpdate}
-            invalid={invalidName}
-          />
-          <Input
-            label="Email *"
-            name="email"
-            onChange={this.handleUpdate}
-            invalid={invalidEmail}
-          />
-          <Input
-            label="Phone Number *"
-            name="phone"
-            onChange={this.handleUpdate}
-            invalid={invalidPhone}
-          />
-          <TextArea
-            label="Questions or Comments"
-            name="questions"
-            onChange={this.handleUpdate}
-          />
-          <CenterBlock>
-            <Button onClick={this.validateForm}>Send</Button>
-          </CenterBlock>
-        </Form>
+        {!submitted && (
+          <Form>
+            <Title size="lg" align="center" styles={TitleStylesOverride}>
+              Download Study
+            </Title>
+            <Subtext alignment="center" styles="margin-bottom: 3vh">
+              Request to view and download this study by filling out this form.
+            </Subtext>
+            <Input
+              label="Full Name *"
+              name="name"
+              onChange={this.handleUpdate}
+              invalid={invalidName}
+            />
+            <Input
+              label="Email *"
+              name="email"
+              onChange={this.handleUpdate}
+              invalid={invalidEmail}
+            />
+            <Input
+              label="Phone Number *"
+              name="phone"
+              onChange={this.handleUpdate}
+              invalid={invalidPhone}
+            />
+            <TextArea
+              label="Questions or Comments"
+              name="questions"
+              onChange={this.handleUpdate}
+            />
+            <CenterBlock>
+              <Button onClick={this.validateForm}>Send</Button>
+            </CenterBlock>
+          </Form>
+        )}
+
+        {submitted && (
+          <Form>
+            <Success />
+          </Form>
+        )}
       </Container>
     );
   }

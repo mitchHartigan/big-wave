@@ -1,27 +1,31 @@
-const BACKEND_URL = 'http://localhost:8080';
+const BACKEND_URL = "https://jt4f3uepm7.execute-api.us-east-1.amazonaws.com/";
 
-export const POST_CONTACT_FORM = (data) => {
+export const POST_CONTACT_FORM = async (data) => {
   const response = await fetch(`${BACKEND_URL}/contact`, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
-    }
-  })
+    },
+  });
 
-  const body = response.json();
+  console.log("response:", response);
+  const body = await response.json();
+  console.log("body:", body);
   return body;
 };
 
-export const POST_DOWNLOAD_FORM = (data) => {
-  const response = await fetch(`${BACKEND_URL}/download`, {
+export const POST_DOWNLOAD_FORM = async (data) => {
+  const response = await fetch(`${BACKEND_URL}/casestudy`, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
-    }
-  })
+    },
+  });
 
-  const body = response.json();
+  console.log("response:", response);
+  const body = await response.json();
+  console.log("body:", body);
   return body;
 };

@@ -11,7 +11,7 @@ export const Pomona = () => {
     <Container>
       <ScrollToTopOnMount />
       <Header />
-      <DownloadForm />
+      <DownloadForm study="Pomona, CA" />
       <Footer />
       <Navbar alwaysDisplay />
     </Container>
