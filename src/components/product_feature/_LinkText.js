@@ -31,11 +31,11 @@ const Text = styled.p`
   width: 100%;
   line-height: 30px;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1700px) {
     font-size: ${(props) => props.theme.text.xxs};
   }
 
-  @media (max-width: 1330px) {
+  @media (max-width: 1400px) {
     text-align: center;
   }
 
