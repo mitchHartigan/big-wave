@@ -111,7 +111,7 @@ export class DownloadForm extends React.Component {
             />
             <CenterBlock>
               <SubmitButton onClick={this.validateForm} submitted={submitted}>
-                Slap
+                Send
               </SubmitButton>
             </CenterBlock>
           </Form>

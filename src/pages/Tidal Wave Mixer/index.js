@@ -44,7 +44,7 @@ const feature1 = {
   `,
   linkDescription: "Read more about this process and ",
   link: "our testing methods here.",
-  href: "#",
+  href: "TidalWaveMixer_Brochure.pdf",
 };
 
 const feature2 = {
@@ -60,7 +60,7 @@ const feature2 = {
   `,
   linkDescription: "Download and ",
   link: "view our NSF/ANSI test results here.",
-  href: "#",
+  href: "TidalWaveMixer_Brochure.pdf",
 };
 
 const feature3 = {
@@ -76,7 +76,7 @@ const feature3 = {
   `,
   linkDescription: "Download and ",
   link: "view a speed benchmark of the Tidal Wave Mixer.",
-  href: "#",
+  href: "TidalWaveMixer_Brochure.pdf",
 };
 
 export const TidalWaveMixer = () => {

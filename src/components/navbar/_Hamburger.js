@@ -45,6 +45,7 @@ const Container = styled.div`
   z-index: 10;
   box-sizing: border-box;
   cursor: pointer;
+  border-radius: 2px;
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 1230px) {

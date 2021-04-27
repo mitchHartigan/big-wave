@@ -6,7 +6,9 @@ import { Subtext } from "components/Subtext";
 import { TextArea } from "components/form/TextArea";
 import { Button } from "components/Button";
 import { CenterBlock } from "components/CenterBlock";
-import styled from "styled-components";
+import { SubmitButton } from "components/form/SubmitButton";
+import { POST_CONTACT_FORM } from "components/API";
+import { Success } from "components/form/Success";
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -19,6 +21,8 @@ export default class ContactForm extends Component {
       invalidName: false,
       invalidEmail: false,
       invalidMessage: false,
+      submitted: false,
+      success: false,
     };
   }
 
@@ -29,7 +33,7 @@ export default class ContactForm extends Component {
   };
 
   validateForm = () => {
-    const { name, email, message } = this.state;
+    const { name, email, phone, message } = this.state;
 
     this.setState(
       {
@@ -37,48 +41,81 @@ export default class ContactForm extends Component {
         invalidEmail: email === "",
         invalidMessage: message === "",
       },
-      () => {
+      async () => {
         const { invalidName, invalidEmail, invalidMessage } = this.state;
 
         if ((!invalidName, !invalidEmail, !invalidMessage)) {
           // post form.
-          console.log("form is valid and ready to be posted.");
+          const payload = {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+          };
+
+          this.setState({ submitted: true });
+          const submission = await POST_CONTACT_FORM(payload);
+          console.log("submission", submission);
+
+          if (submission === "success") {
+            this.setState({ success: true });
+          }
         }
       }
     );
   };
 
   render() {
-    const { invalidEmail, invalidMessage, invalidName } = this.state;
+    const {
+      invalidEmail,
+      invalidMessage,
+      invalidName,
+      submitted,
+      success,
+    } = this.state;
 
-    return (
-      <Form>
-        <Subtext alignment="center" styles="margin-bottom: 0px;">
-          Or, send us a message directly:
-        </Subtext>
-        <Input
-          label="Full Name *"
-          name="name"
-          onChange={this.handleUpdate}
-          invalid={invalidName}
-        />
-        <Input
-          label="Email *"
-          name="email"
-          onChange={this.handleUpdate}
-          invalid={invalidEmail}
-        />
-        <Input label="Phone Number" name="phone" onChange={this.handleUpdate} />
-        <TextArea
-          label="Message *"
-          name="message"
-          onChange={this.handleUpdate}
-          invalid={invalidMessage}
-        />
-        <CenterBlock>
-          <Button onClick={this.validateForm}>Send</Button>
-        </CenterBlock>
-      </Form>
-    );
+    if (!success) {
+      return (
+        <Form>
+          <Subtext alignment="center" styles="margin-bottom: 0px;">
+            Or, send us a message directly:
+          </Subtext>
+          <Input
+            label="Full Name *"
+            name="name"
+            onChange={this.handleUpdate}
+            invalid={invalidName}
+          />
+          <Input
+            label="Email *"
+            name="email"
+            onChange={this.handleUpdate}
+            invalid={invalidEmail}
+          />
+          <Input
+            label="Phone Number"
+            name="phone"
+            onChange={this.handleUpdate}
+          />
+          <TextArea
+            label="Message *"
+            name="message"
+            onChange={this.handleUpdate}
+            invalid={invalidMessage}
+          />
+          <CenterBlock>
+            <SubmitButton onClick={this.validateForm} submitted={submitted}>
+              Send
+            </SubmitButton>
+          </CenterBlock>
+        </Form>
+      );
+    } else {
+      return (
+        <Form>
+          <Success />
+        </Form>
+      );
+    }
   }
 }

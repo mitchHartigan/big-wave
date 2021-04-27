@@ -29,9 +29,9 @@ export class TechnicalSpecs extends React.Component {
           <Card>
             <VisibilitySensor onChange={this._display}>
               <Title
-                size="xl"
+                size="lg"
                 align="center"
-                spanWidth="14.5vw"
+                spanWidth="8vw"
                 styles={TitleStylesOverride}
               >
                 Technical Specifications
@@ -66,7 +66,7 @@ export class TechnicalSpecs extends React.Component {
             <Spec name="Installation Equipment:">
               316 Stainless Steel Chain
             </Spec>
-            <DownloadButton href="#" target="_blank">
+            <DownloadButton href="TidalWaveMixer_Brochure.pdf" target="_blank">
               Download the full Tidal Wave Mixer Specifications (PDF).
             </DownloadButton>
           </Card>

@@ -27,7 +27,7 @@ const feature1 = {
     `,
   linkDescription: "Read more about the dosing process and our ",
   link: "testing methods here.",
-  href: "#",
+  href: "CBS_Brochure.pdf",
 };
 
 const feature2 = {
@@ -39,8 +39,8 @@ const feature2 = {
   anaylzers, and is reliable, operator friendly, and easy to use.
   `,
   linkDescription: "Read more about this process and ",
-  link: "view the control panel interface here.",
-  href: "#",
+  link: "view the benefits of the CBS system here.",
+  href: "CBS_Brochure.pdf",
 };
 
 const feature3 = {
@@ -54,7 +54,7 @@ const feature3 = {
   `,
   linkDescription: "Download and view our ",
   link: "chlorine residual management accuracy tests here.",
-  href: "#",
+  href: "CBS_Brochure.pdf",
 };
 
 export class ChloramineBoostingSystem extends React.Component {
