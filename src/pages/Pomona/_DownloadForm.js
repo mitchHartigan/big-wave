@@ -3,7 +3,7 @@ import { Form } from "components/form/Form";
 import { Success } from "components/form/Success";
 import { Input } from "components/form/Input";
 import { TextArea } from "components/form/TextArea";
-import { Button } from "components/Button";
+import { SubmitButton } from "components/form/SubmitButton";
 import { Subtext } from "components/Subtext";
 import { Title } from "components/Title";
 import { CenterBlock } from "components/CenterBlock";
@@ -23,6 +23,7 @@ export class DownloadForm extends React.Component {
       invalidEmail: false,
       invalidPhone: false,
       submitted: false,
+      success: false,
     };
   }
 
@@ -54,11 +55,12 @@ export class DownloadForm extends React.Component {
             study: study,
           };
 
+          this.setState({ submitted: true });
           const submission = await POST_DOWNLOAD_FORM(payload);
           console.log("submission:", submission);
 
           if (submission === "success") {
-            this.setState({ submitted: true });
+            this.setState({ success: true });
           }
         }
       }
@@ -66,11 +68,17 @@ export class DownloadForm extends React.Component {
   };
 
   render() {
-    const { invalidName, invalidEmail, invalidPhone, submitted } = this.state;
+    const {
+      invalidName,
+      invalidEmail,
+      invalidPhone,
+      submitted,
+      success,
+    } = this.state;
 
     return (
       <Container>
-        {!submitted && (
+        {!success && (
           <Form>
             <Title size="lg" align="center" styles={TitleStylesOverride}>
               Download Study
@@ -102,12 +110,14 @@ export class DownloadForm extends React.Component {
               onChange={this.handleUpdate}
             />
             <CenterBlock>
-              <Button onClick={this.validateForm}>Send</Button>
+              <SubmitButton onClick={this.validateForm} submitted={submitted}>
+                Slap
+              </SubmitButton>
             </CenterBlock>
           </Form>
         )}
 
-        {submitted && (
+        {success && (
           <Form>
             <Success />
           </Form>
