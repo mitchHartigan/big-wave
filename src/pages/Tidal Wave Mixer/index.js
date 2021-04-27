@@ -33,7 +33,7 @@ const mixerAnimationSizes = {
 };
 
 const feature1 = {
-  titleText: "Eliminates Thermal Stratification",
+  titleText: "Eliminates Thermal Stratification.",
   descriptionText: `
   The unique active mixing process of the Tidal Wave
   Mixer will swiftly disintegrate stagnated water layers
