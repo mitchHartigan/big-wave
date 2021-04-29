@@ -5,6 +5,7 @@ import { ScrollButton } from "components/navigation/ScollButton";
 import { CenterBlock } from "components/CenterBlock";
 import { FadeIn } from "components/FadeIn";
 import VisibilitySensor from "react-visibility-sensor";
+import { BrochureButton } from "components/navigation/BrochureButton";
 
 export default class CallToAction extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ export default class CallToAction extends React.Component {
         <VisibilitySensor onChange={this._display}>
           <Container>
             <FadeIn delay="50" visible={visible}>
-              <Title spanWidth={"15vw"} size={"xxl"}>
+              <Title spanWidth={"17vw"} size={"xxl"}>
                 The Tidal Wave Mixer.
               </Title>
             </FadeIn>
@@ -39,9 +40,10 @@ export default class CallToAction extends React.Component {
             </FadeIn>
 
             <FadeIn delay="650" visible={visible}>
-              <CenterBlock>
+              <ButtonsContainer>
+                <BrochureButton href="#" />
                 <ScrollButton>View details</ScrollButton>
-              </CenterBlock>
+              </ButtonsContainer>
             </FadeIn>
           </Container>
         </VisibilitySensor>
@@ -65,6 +67,13 @@ const Container = styled.div`
   @media (max-width: 1100px) {
     margin: 3vh 0vw 0vw 0vw;
   }
+`;
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Text = styled.p`

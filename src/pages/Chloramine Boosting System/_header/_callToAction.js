@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Title } from "components/Title";
 import { ScrollButton } from "components/navigation/ScollButton";
-import { CenterBlock } from "components/CenterBlock";
+import { BrochureButton } from "components/navigation/BrochureButton";
 import { FadeIn } from "components/FadeIn";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -29,7 +29,7 @@ export default class CallToAction extends React.Component {
       <VisibilitySensor onChange={this._display}>
         <Container>
           <FadeIn delay="50" visible={visible}>
-            <Title spanWidth={"20vw"} size={"xl"}>
+            <Title spanWidth={"18vw"} size={"xl"}>
               Our Chloramine Boosting System.
             </Title>
           </FadeIn>
@@ -39,9 +39,10 @@ export default class CallToAction extends React.Component {
           </FadeIn>
 
           <FadeIn delay="650" visible={visible}>
-            <CenterBlock>
+            <ButtonsContainer>
+              <BrochureButton href="2#" />
               <ScrollButton>View details</ScrollButton>
-            </CenterBlock>
+            </ButtonsContainer>
           </FadeIn>
         </Container>
       </VisibilitySensor>
@@ -60,6 +61,13 @@ const Container = styled.div`
   }
 `;
 
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const Text = styled.p`
   margin: 3vh 0px 3vh 0px;
   font-family: ${(props) => props.theme.font};
@@ -69,24 +77,3 @@ const Text = styled.p`
   width: 100%;
   -webkit-font-smoothing: antialiased;
 `;
-
-function _adaptTitleSize() {
-  let breakpoint = window.matchMedia("(max-width: 1200px)");
-
-  if (breakpoint.matches) {
-    // window is smaller than 800px.
-    console.log("breakpoin hit");
-    return "xl";
-  } else {
-    return "xxs";
-  }
-}
-
-const adaptSpanWidth = () => {
-  let breakpoint = window.matchMedia("(max-width: 1330px)");
-
-  if (breakpoint.matches) {
-    return "15vw";
-  }
-  return "6vw";
-};
