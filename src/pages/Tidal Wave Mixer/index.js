@@ -33,7 +33,7 @@ const mixerAnimationSizes = {
 };
 
 const feature1 = {
-  titleText: "Eliminates Thermal Stratification.",
+  titleText: "Eliminates Thermal and Chemical Stratification.",
   descriptionText: `
   The unique active mixing process of the Tidal Wave
   Mixer will swiftly disintegrate stagnated water layers
@@ -59,8 +59,8 @@ const feature2 = {
   with advanced safety features.
   `,
   linkDescription: "Download and ",
-  link: "view our NSF/ANSI test results here.",
-  href: "TidalWaveMixer_Brochure.pdf",
+  link: "view our NSF/ANSI certification here.",
+  href: "Mixer_ULCert.pdf",
 };
 
 const feature3 = {
@@ -74,8 +74,8 @@ const feature3 = {
   the advanced mixing process of Tidal Wave Mixer can achieve 
   100% water mixing in high-volume tanks in a very short amount of time.
   `,
-  linkDescription: "Download and ",
-  link: "view a speed benchmark of the Tidal Wave Mixer.",
+  linkDescription: "Read more about the ",
+  link: "speed and efficiency of the Tidal Wave Mixer here.",
   href: "TidalWaveMixer_Brochure.pdf",
 };
 

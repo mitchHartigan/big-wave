@@ -40,7 +40,7 @@ export default class CallToAction extends React.Component {
 
           <FadeIn delay="650" visible={visible}>
             <ButtonsContainer>
-              <BrochureButton href="2#" />
+              <BrochureButton href="CBS_Brochure.pdf" />
               <ScrollButton>View details</ScrollButton>
             </ButtonsContainer>
           </FadeIn>
