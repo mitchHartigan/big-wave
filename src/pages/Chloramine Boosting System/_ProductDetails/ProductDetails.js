@@ -9,12 +9,12 @@ import VisibilitySensor from "react-visibility-sensor";
 import { FadeIn } from "components/FadeIn";
 
 const bulletPoints = [
+  "Maintain uniform water quality throughout the reservoir.",
   "Continuous measurement of water quality.",
-  "Control resevoir remotely.",
-  "Low power consumption.",
-  "Modularly designed, with solar options available.",
-  "Proven amperometric reagantless chlorine management.",
-  "Compatible with various different disinfection methods.",
+  "Decrease in maintenance hours.",
+  "Chemical dosing control to operator set point.",
+  "Portable systems available.",
+  "Guaranteed results.",
 ];
 
 export default class ProductDetails extends Component {
@@ -56,6 +56,14 @@ export default class ProductDetails extends Component {
               Wondering if the Chloramine Boosting System is the right solution
               for your tank?
             </Text>
+            <DownloadButton
+              href="spec_ChloramineBoostingSystem.docx"
+              target="_blank"
+            >
+              Download the full Chloramine Boosting System Specifications
+              (.docx).
+            </DownloadButton>
+            <OrText> or </OrText>
             <CenterBlock>
               <LinkButton to="/">Get in touch with us</LinkButton>
             </CenterBlock>
@@ -88,6 +96,24 @@ const Card = styled.div`
 
   @media (max-width: 800px) {
     padding: 2vh 4vw 3vh 4vw;
+  }
+`;
+
+const OrText = styled.p`
+  margin: 1vh 0px 2vh 0px;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.text.xs};
+  text-align: center;
+  color: ${(props) => props.theme.colors.darkBlue};
+  width: 100%;
+  line-height: 30px;
+
+  @media (max-width: 1550px) {
+    font-size: ${(props) => props.theme.text.xxs};
+  }
+
+  @media (max-width: 1400px) {
+    margin-top: 2vh;
   }
 `;
 
@@ -132,4 +158,26 @@ const Text = styled.p`
   @media (max-width: 1400px) {
     margin-top: 2vh;
   }
+`;
+
+const DownloadButton = styled.a`
+  padding: 10px 30px 10px 30px;
+  margin: 0vh 0vw 2vh 0vw;
+  background-color: ${(props) => props.theme.colors.mainBlue};
+  color: white;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.text.xs};
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  &: hover {
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.25);
+    transform: translate(0px, -1px);
+  }
+  transition: box-shadow 100ms ease;
+  transition: transform 100ms ease;
 `;

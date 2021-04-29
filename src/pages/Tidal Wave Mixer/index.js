@@ -42,9 +42,9 @@ const feature1 = {
   the storage tank in order to maintain consistent water
   temperature.
   `,
-  linkDescription: "Read more about this process and ",
-  link: "our testing methods here.",
-  href: "TidalWaveMixer_Brochure.pdf",
+  linkDescription: "See how the ",
+  link: "Tidal Wave Mixer eliminates stratification here.",
+  href: "ThermalStratification.pdf",
 };
 
 const feature2 = {
@@ -74,9 +74,9 @@ const feature3 = {
   the advanced mixing process of Tidal Wave Mixer can achieve 
   100% water mixing in high-volume tanks in a very short amount of time.
   `,
-  linkDescription: "Read more about the ",
-  link: "speed and efficiency of the Tidal Wave Mixer here.",
-  href: "TidalWaveMixer_Brochure.pdf",
+  linkDescription: "View a graph of the ",
+  link: "Tidal Wave Mixer's efficiency here.",
+  href: "FastEfficientMixing.pdf",
 };
 
 export const TidalWaveMixer = () => {

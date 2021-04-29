@@ -66,8 +66,8 @@ export class TechnicalSpecs extends React.Component {
             <Spec name="Installation Equipment:">
               316 Stainless Steel Chain
             </Spec>
-            <DownloadButton href="TidalWaveMixer_Brochure.pdf" target="_blank">
-              Download the full Tidal Wave Mixer Specifications (PDF).
+            <DownloadButton href="spec_TidalWaveMixer.docx" target="_blank">
+              Download the full Tidal Wave Mixer Specifications (.docx).
             </DownloadButton>
           </Card>
         </Container>
