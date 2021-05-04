@@ -12,7 +12,7 @@ const bulletPoints = [
   "Maintain uniform water quality throughout the reservoir.",
   "Continuous measurement of water quality.",
   "Decrease in maintenance hours.",
-  "Chemical dosing control to operator set point.",
+  "Chemical dosing control to an operator selected point.",
   "Portable systems available.",
   "Guaranteed results.",
 ];
