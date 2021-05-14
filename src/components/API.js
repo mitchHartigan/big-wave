@@ -9,9 +9,7 @@ export const POST_CONTACT_FORM = async (data) => {
     },
   });
 
-  console.log("response:", response);
   const body = await response.json();
-  console.log("body:", body);
   return body;
 };
 
@@ -24,8 +22,6 @@ export const POST_DOWNLOAD_FORM = async (data) => {
     },
   });
 
-  console.log("response:", response);
   const body = await response.json();
-  console.log("body:", body);
   return body;
 };
