@@ -43,6 +43,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  filter: saturate(160%);
 `;
 
 const Image = styled.img`
