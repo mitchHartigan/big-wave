@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "./NavLink";
+import { InactiveNavLink } from "./InactiveNavLink";
 import { LogoLink } from "./LogoLink";
 import { Logo } from "./_Logo";
 import styled from "styled-components";
@@ -37,9 +38,9 @@ export default class Navbar extends React.Component {
           <NavLink route="/" exact width="20%">
             Contact Us
           </NavLink>
-          <NavLink route="/casestudies" width="20%">
+          <InactiveNavLink route="/casestudies" width="20%">
             Case Studies
-          </NavLink>
+          </InactiveNavLink>
           <LogoLink route="/" exact>
             <Logo />
           </LogoLink>
