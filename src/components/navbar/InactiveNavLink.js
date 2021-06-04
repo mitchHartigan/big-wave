@@ -23,6 +23,7 @@ const Text = styled.button`
   outline: none;
   border: none;
   background-color: transparent;
+  opacity: 75%;
 
   @media (max-width: 1400px) {
     font-size: ${(props) => props.theme.text.xxs};
