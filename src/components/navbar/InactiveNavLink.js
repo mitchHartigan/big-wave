@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const InactiveNavLink = (props) => {
-  const { children, route, override, width, align, styles, logo } = props;
+  const { children, override, width, align, styles, logo } = props;
 
   return (
     <Container width={width} align={align} styles={styles} logo={logo}>
