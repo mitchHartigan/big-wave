@@ -93,7 +93,7 @@ export class ChloramineBoostingSystem extends React.Component {
         <ProductFeature
           description={feature2}
           animSource={elementAnimation}
-          animSpeed={0.8}
+          animSpeed={0.7}
           animSizes={animSizes}
           swap
         />
