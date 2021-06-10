@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://jt4f3uepm7.execute-api.us-east-1.amazonaws.com/";
+const BACKEND_URL = "https://jt4f3uepm7.execute-api.us-east-1.amazonaws.com";
 
 export const POST_CONTACT_FORM = async (data) => {
   const response = await fetch(`${BACKEND_URL}/contact`, {

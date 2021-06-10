@@ -43,7 +43,7 @@ export class TechnicalSpecs extends React.Component {
             <Spec name="Motor Type:">
               NSF 61, 1.5HP, 230 VAC, water-filled, water-lubricated
             </Spec>
-            <Spec name="RPM:">2500</Spec>
+            <Spec name="RPM:">3100</Spec>
             <Spec name="Power Draw:">14 amps, 1800 watts</Spec>
             <Spec name="Footprint Diameter:">23" (58.42 cm)</Spec>
             <Spec name="Height:">30.75” (78.10 cm)</Spec>
