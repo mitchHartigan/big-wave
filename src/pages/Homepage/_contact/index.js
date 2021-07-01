@@ -31,7 +31,7 @@ export default class Contact extends Component {
             imgURL="contact_email_icon.png"
             imgAlt="Email icon."
             text="info@bigwavewater.com"
-            href="mailto: mitch.hartigan@gmail.com"
+            href="mailto: info@bigwavewater.com"
           />
         </InfoContainer>
 
