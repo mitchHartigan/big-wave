@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import fillStyles from "./fillStyles.css";
 
 const MapContainer = styled.div`
   cursor: pointer;
@@ -12,13 +11,10 @@ export default class InteractiveMap extends Component {
 
     this.state = {
       stateColors: {},
-
     };
   }
 
-  _loadAreaRep = (stateName) => {
-    
-  };
+  _loadAreaRep = (stateName) => {};
 
   _setIndividualHoveredState = (stateName) => {
     let countryState = this.state.stateColors;
@@ -111,7 +107,7 @@ export default class InteractiveMap extends Component {
               onMouseLeave={() =>
                 this._clearIndividualHoveredState("newMexico")
               }
-              onClick={this._setHoverTarget("newMexico")}
+              onClick={this._loadAreaRep("newMexico")}
             />
             <path
               id="arkansas"
