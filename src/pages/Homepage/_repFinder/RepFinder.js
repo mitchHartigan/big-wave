@@ -15,13 +15,6 @@ export default class RepFinder extends React.Component {
     };
   }
 
-  // _toggleDisplayAllReps = () => {
-  //   console.log("hello?");
-  //   this.setState({ displayAllReps: true }, () => {
-  //     console.log("toggled display all reps", this.state);
-  //   });
-  // };
-
   render() {
     const { displayAllReps } = this.state;
     const { coastalProcess, dAndHWaterSystems } = Representatives;
