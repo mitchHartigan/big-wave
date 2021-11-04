@@ -38,9 +38,9 @@ export default class Navbar extends React.Component {
           <NavLink route="/" exact width="20%">
             Contact Us
           </NavLink>
-          <InactiveNavLink route="/casestudies" width="20%">
+          <NavLink route="/casestudies" width="20%">
             Case Studies
-          </InactiveNavLink>
+          </NavLink>
           <LogoLink route="/" exact>
             <Logo />
           </LogoLink>
@@ -104,4 +104,5 @@ const Container = styled.div`
   @media (max-width: 1230px) {
     justify-content: flex-start;
   }
+  z-index: 10;
 `;

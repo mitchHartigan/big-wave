@@ -34,6 +34,10 @@ const LogoContainer = styled.div`
   justify-content: space-between;
   margin-right: 15%;
   width: 15%;
+
+  @media (max-width: 600px) {
+    visibility: hidden;
+  }
 `;
 
 const Container = styled.div`
