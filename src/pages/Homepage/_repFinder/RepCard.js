@@ -3,28 +3,43 @@ import styled from "styled-components";
 import { CenterBlock } from "components/CenterBlock";
 
 export default function RepCard(props) {
+  const {
+    logoSrc,
+    logoAlt,
+    logoHeight,
+    logoWidth,
+    location,
+    email,
+    phone,
+    phonePrefill,
+  } = props.repData;
+  const { marginOverride } = props;
+
   return (
     <Container>
       <CenterBlock>
         <RepLogo
-          src="repLogos/coastalProcess.png"
-          alt="repLogos"
-          imgHeight={props.imgHeight}
-          imgWidth={props.imgWidth}
+          src={`/repLogos/${logoSrc}`}
+          alt={logoAlt}
+          imgHeight={logoHeight}
+          imgWidth={logoWidth}
+          marginOverride={marginOverride}
         />
       </CenterBlock>
       <DetailsContainer>
         <Details>
           <DetailIcon src="rep_location_icon.png" />
-          <LocationText>{`Lousiana & Mississippi`}</LocationText>
+          <LocationText>{location}</LocationText>
         </Details>
         <Details>
           <DetailIcon src="rep_email_icon.png" />
-          <Email>info@coastalprocess.net</Email>
+          <Email href={`mailto:${email}`} target="_blank">
+            {email}
+          </Email>
         </Details>
         <Details>
           <DetailIcon src="rep_phone_icon.png" />
-          <PhoneNumber>225 - 567 - 3120</PhoneNumber>
+          <PhoneNumber href={phonePrefill}>{phone}</PhoneNumber>
         </Details>
       </DetailsContainer>
     </Container>
@@ -34,14 +49,15 @@ export default function RepCard(props) {
 const RepLogo = styled.img`
   height: ${(props) => props.imgHeight};
   width: ${(props) => props.imgWidth};
+  margin: ${(props) => props.marginOverride};
   margin-bottom: 30px;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 450px;
-  width: 470px;
+  height: 430px;
+  width: 480px;
   color: white;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.35);
   justify-content: center;
@@ -56,7 +72,7 @@ const DetailsContainer = styled.div`
 const Details = styled.div`
   margin: 15px 0px 15px 0px;
   display: grid;
-  grid-template-columns: 15% 10% 7% 43% 25%;
+  grid-template-columns: 15% 10% 7% 48% 20%;
   grid-template-rows: 1fr;
 `;
 
@@ -80,8 +96,9 @@ const LocationText = styled.p`
   -webkit-font-smoothing: antialiased;
 `;
 
-const Email = styled.p`
+const Email = styled.a`
   grid-column: 4 / 5;
+  text-decoration: none;
   margin: 0px;
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text.sm};
@@ -92,8 +109,9 @@ const Email = styled.p`
   -webkit-font-smoothing: antialiased;
 `;
 
-const PhoneNumber = styled.p`
+const PhoneNumber = styled.a`
   grid-column: 4 / 5;
+  text-decoration: none;
   margin: 0px;
   font-family: ${(props) => props.theme.font};
   font-size: ${(props) => props.theme.text.sm};
