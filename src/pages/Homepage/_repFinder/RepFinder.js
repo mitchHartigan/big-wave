@@ -34,7 +34,15 @@ export default class RepFinder extends React.Component {
 
     return (
       <Container>
-        <Title>Representative Finder</Title>
+        <Title
+          size="lg"
+          styles="@media(max-width:1150px) {margin-bottom: 30px}"
+        >
+          Our Representatives
+        </Title>
+        <DescriptionText alignment="center">
+          Hover over the map to view our representatives by their service areas.
+        </DescriptionText>
         <InteractiveMap />
         <CenterBlock>
           <Button
@@ -58,11 +66,14 @@ export default class RepFinder extends React.Component {
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={miscoInter} />
-            <RepCard repData={miscoNorcal} />
+            <RepCard
+              repData={miscoNorcal}
+              marginOverride="10px 0px -10px 0px"
+            />
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={tmg} />
-            <RepCard repData={tc} />
+            <RepCard repData={tc} marginOverride="-10px 0px -10px 0px" />
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={pyrz} />
@@ -70,7 +81,7 @@ export default class RepFinder extends React.Component {
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={hpThompson} />
-            <RepCard repData={mc2} />
+            <RepCard repData={mc2} marginOverride="40px 0px 0px 0px" />
           </RepCardRow>
         </RepCardContainer>
       </Container>
@@ -81,6 +92,7 @@ export default class RepFinder extends React.Component {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 90px;
 `;
 
 const RepCardContainer = styled.div`
@@ -90,14 +102,32 @@ const RepCardContainer = styled.div`
   align-items: center;
   width: 100%;
   display: ${(props) => (props.isVisible ? "flex" : "none")};
+
+  @media (max-width: 1150px) {
+    display: flex;
+  }
 `;
 
 const RepCardRow = styled.div`
   display: flex;
   flex-direction: row;
   width: 60%;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 35px 0px 35px 0px;
+
+  @media (max-width: 1800px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1300px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1150px) {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+  }
 `;
 
 const Button = styled.button`
@@ -118,4 +148,22 @@ const Button = styled.button`
   }
   transition: box-shadow 100ms ease;
   transition: transform 100ms ease;
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
+`;
+
+const DescriptionText = styled.p`
+  margin: 40px 0px 0px 0px;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.text[props.size]};
+  text-align: ${(props) => props.alignment};
+  color: ${(props) => props.theme.colors.darkBlue};
+  width: 100%;
+  line-height: 30px;
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
 `;

@@ -20,6 +20,10 @@ const MapContainer = styled.div`
 const InteractionContainer = styled.div`
   position: relative;
   width: 100%;
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
 `;
 
 export default class InteractiveMap extends Component {

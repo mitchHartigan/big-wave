@@ -66,6 +66,10 @@ const Container = styled.div`
   background: white;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.35);
   justify-content: center;
+
+  @media (max-width: 1150px) {
+    margin: 30px 0px 30px 0px;
+  }
 `;
 
 const DetailsContainer = styled.div`
