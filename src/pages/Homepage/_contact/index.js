@@ -24,8 +24,8 @@ export default class Contact extends Component {
           <Info
             imgURL="contact_phone_icon.png"
             imgAlt="Phone icon."
-            text="667 - 244 - 9283"
-            href="tel:6672449283"
+            text="760 - 717 - 2249"
+            href="tel:7607172249"
           />
           <Info
             imgURL="contact_email_icon.png"
