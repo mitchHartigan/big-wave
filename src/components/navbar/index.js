@@ -104,4 +104,5 @@ const Container = styled.div`
   @media (max-width: 1230px) {
     justify-content: flex-start;
   }
+  z-index: 10;
 `;

@@ -23,5 +23,5 @@ const Container = styled.div`
   top: 130px;
   margin-left: auto;
   margin-right: auto;
-  z-index: 10;
+  z-index: 1;
 `;
