@@ -6,7 +6,7 @@ import { Description } from "./_description/index";
 import Contact from "./_contact/index";
 import { Footer } from "components/Footer";
 import { Hero } from "./_Hero";
-import InteractiveMap from "./_repFinder/InteractiveMap";
+import RepFinder from "./_repFinder/RepFinder";
 
 export default function Homepage() {
   return (
@@ -14,7 +14,7 @@ export default function Homepage() {
       <Hero />
       <Description />
       <Contact />
-      <InteractiveMap />
+      <RepFinder />
       <Footer />
       <Navbar />
     </Container>
