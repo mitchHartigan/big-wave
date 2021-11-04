@@ -6,23 +6,50 @@ import RepCard from "./RepCard";
 import { Representatives } from "./Representatives";
 import { CenterBlock } from "components/CenterBlock";
 
-export default function RepFinder() {
-  const { coastalProcess, dAndHWaterSystems } = Representatives;
-  return (
-    <Container>
-      <Title>Representative Finder</Title>
-      <InteractiveMap />
-      <CenterBlock>
-        <RepCardRow>
-          <RepCard repData={coastalProcess} />
-          <RepCard
-            repData={dAndHWaterSystems}
-            marginOverride="30px 0px 30px 0px"
-          />
-        </RepCardRow>
-      </CenterBlock>
-    </Container>
-  );
+export default class RepFinder extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayAllReps: false,
+    };
+  }
+
+  // _toggleDisplayAllReps = () => {
+  //   console.log("hello?");
+  //   this.setState({ displayAllReps: true }, () => {
+  //     console.log("toggled display all reps", this.state);
+  //   });
+  // };
+
+  render() {
+    const { displayAllReps } = this.state;
+    const { coastalProcess, dAndHWaterSystems } = Representatives;
+
+    return (
+      <Container>
+        <Title>Representative Finder</Title>
+        <InteractiveMap />
+        <CenterBlock>
+          <Button
+            onClick={() => this.setState({ displayAllReps: true })}
+            isVisible={!displayAllReps}
+          >
+            View all our representatives
+          </Button>
+        </CenterBlock>
+        <RepCardContainer isVisible={displayAllReps}>
+          <RepCardRow>
+            <RepCard repData={coastalProcess} />
+            <RepCard
+              repData={dAndHWaterSystems}
+              marginOverride="30px 0px 30px 0px"
+            />
+          </RepCardRow>
+        </RepCardContainer>
+      </Container>
+    );
+  }
 }
 
 const Container = styled.div`
@@ -30,11 +57,37 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const RepCardContainer = styled.div``;
+const RepCardContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  display: ${(props) => (props.isVisible ? "flex" : "none")};
+`;
 
 const RepCardRow = styled.div`
   display: flex;
   flex-direction: row;
   width: 65%;
   justify-content: space-around;
+`;
+
+const Button = styled.button`
+  display: ${(props) => (props.isVisible ? "block" : "none")};
+  padding: 10px 90px 10px 90px;
+  background-color: ${(props) => props.theme.colors.mainBlue};
+  color: white;
+  font-family: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.text.xs};
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  &: hover {
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.25);
+    transform: translate(0px, -1px);
+  }
+  transition: box-shadow 100ms ease;
+  transition: transform 100ms ease;
 `;
