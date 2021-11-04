@@ -39,7 +39,7 @@ export const Representatives = {
     phone: "913 - 782 - 4692",
     phonePrefill: "tel:9137824692",
   },
-  misco: {
+  miscoInter: {
     logoSrc: "misco.png",
     logoHeight: "160px",
     logoWidth: "170px",
@@ -48,6 +48,16 @@ export const Representatives = {
     email: "smarshall@miscowater.com",
     phone: "303 - 309 - 6150",
     phonePrefill: "tel:3033096150",
+  },
+  miscoNorcal: {
+    logoSrc: "misco.png",
+    logoHeight: "160px",
+    logoWidth: "170px",
+    logoAlt: "Misco Water Logo",
+    location: "Northern California & Northern Nevada",
+    email: "sclarke@miscowater.com",
+    phone: "925 - 225 - 1900",
+    phonePrefill: "tel:9252251900",
   },
   tmg: {
     logoSrc: "tmg.png",

@@ -60,7 +60,8 @@ export default class InteractiveMap extends Component {
       dAndHWaterSystems,
       macaulay,
       haynes,
-      misco,
+      miscoInter,
+      miscoNorcal,
       tmg,
       tc,
       pyrz,
@@ -599,15 +600,15 @@ export default class InteractiveMap extends Component {
               />
 
               <RepArea
-                id="haynes"
-                onMouseEnter={() => this._setRepAreaHovered("misco")}
-                onMouseLeave={() => this._setRepAreaUnhovered("misco")}
-                onClick={() => this._openRepCardOverlay("misco")}
+                id="miscoInter"
+                onMouseEnter={() => this._setRepAreaHovered("miscoInter")}
+                onMouseLeave={() => this._setRepAreaUnhovered("miscoInter")}
+                onClick={() => this._openRepCardOverlay("miscoInter")}
               >
                 <path
                   id="wyoming"
                   d="M400.285 278.045L355.536 273.986L355.532 273.985L301.652 267.143L301.646 267.142L263.372 261.417L267.296 235.37L267.296 235.369L277.497 169.577L279.853 156.968L348.389 166.421L348.389 166.421L348.398 166.422L409.364 172.76L404.705 225.224L404.705 225.226L400.285 278.045Z"
-                  fill={misco ? "#007FFF" : defaultColor}
+                  fill={miscoInter ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
                   id="path154"
@@ -615,7 +616,7 @@ export default class InteractiveMap extends Component {
                 <path
                   id="colorado"
                   d="M355.473 274.482L355.473 274.482L355.482 274.483L400.49 278.565L400.495 278.566L439.975 281.429L438.311 307.715L438.31 307.717L432.567 387.913L413.018 386.728L413.014 386.728L350.975 380.966L350.967 380.965L288.093 373.192L301.831 267.67L355.473 274.482Z"
-                  fill={misco ? "#007FFF" : defaultColor}
+                  fill={miscoInter ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke="#F5FAFA"
                   stroke-width="0.5"
