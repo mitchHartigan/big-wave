@@ -61,7 +61,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 430px;
   width: 480px;
-  color: white;
+  background: white;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.35);
   justify-content: center;
 `;

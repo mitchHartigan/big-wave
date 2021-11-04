@@ -19,4 +19,14 @@ export const Representatives = {
     phone: "760 - 722 - 6893",
     phonePrefill: "tel:7607226893",
   },
+  macaulay: {
+    logoSrc: "macualay.png",
+    logoHeight: "342px",
+    logoWidth: "114px",
+    logoAlt: "Macaulay Controls Company Logo",
+    location: "Iowa, Nebraska, South Dakota, North Dakota & Minnesota",
+    email: "info@macaulaycontrols.com",
+    phone: "800 - 299 - 1148",
+    phonePrefill: "tel:8002991148",
+  },
 };
