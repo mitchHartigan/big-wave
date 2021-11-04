@@ -38,9 +38,9 @@ export default class Navbar extends React.Component {
           <NavLink route="/" exact width="20%">
             Contact Us
           </NavLink>
-          <NavLink route="/casestudies" width="20%">
+          <InactiveNavLink route="/casestudies" width="20%">
             Case Studies
-          </NavLink>
+          </InactiveNavLink>
           <LogoLink route="/" exact>
             <Logo />
           </LogoLink>
