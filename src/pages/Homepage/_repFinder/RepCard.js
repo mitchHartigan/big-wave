@@ -55,6 +55,10 @@ const RepLogo = styled.img`
   width: ${(props) => props.imgWidth};
   margin: ${(props) => props.marginOverride};
   margin-bottom: 30px;
+
+  @media (max-width: 700px) {
+    max-width: 300px;
+  }
 `;
 
 const Container = styled.div`
@@ -103,6 +107,10 @@ const LocationText = styled.p`
   width: 100%;
   line-height: 30px;
   -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 700px) {
+    font-size: ${(props) => props.theme.text.xxs};
+  }
 `;
 
 const Email = styled.a`
@@ -116,6 +124,10 @@ const Email = styled.a`
   width: 100%;
   line-height: 30px;
   -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 700px) {
+    font-size: ${(props) => props.theme.text.xxs};
+  }
 `;
 
 const PhoneNumber = styled.a`
@@ -129,4 +141,8 @@ const PhoneNumber = styled.a`
   width: 100%;
   line-height: 30px;
   -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 700px) {
+    font-size: ${(props) => props.theme.text.xxs};
+  }
 `;
