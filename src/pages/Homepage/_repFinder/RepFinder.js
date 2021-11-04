@@ -36,7 +36,7 @@ export default class RepFinder extends React.Component {
             <RepCard repData={coastalProcess} />
             <RepCard
               repData={dAndHWaterSystems}
-              marginOverride="30px 0px 30px 0px"
+              marginOverride="40px 0px 30px 0px"
             />
           </RepCardRow>
         </RepCardContainer>
