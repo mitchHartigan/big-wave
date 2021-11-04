@@ -157,7 +157,7 @@ const Button = styled.button`
 const DescriptionText = styled.p`
   margin: 40px 0px 0px 0px;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text[props.size]};
+  font-size: ${(props) => props.theme.text.xs};
   text-align: ${(props) => props.alignment};
   color: ${(props) => props.theme.colors.darkBlue};
   width: 100%;
