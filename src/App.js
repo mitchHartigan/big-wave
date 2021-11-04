@@ -27,9 +27,9 @@ export default function App() {
             <ChloramineBoostingSystem />
           </Route>
 
-          {/* <Route path="/casestudies">
+          <Route path="/casestudies">
             <CaseStudies />
-          </Route> */}
+          </Route>
 
           <Route path="/pomona">
             <Pomona />
