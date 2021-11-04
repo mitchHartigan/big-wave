@@ -77,7 +77,7 @@ const DetailsContainer = styled.div`
 const Details = styled.div`
   margin: 15px 0px 15px 0px;
   display: grid;
-  grid-template-columns: 15% 10% 7% 48% 20%;
+  grid-template-columns: 15% 10% 5% 55% 15%;
   grid-template-rows: 1fr;
 `;
 

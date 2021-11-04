@@ -92,9 +92,9 @@ export const Representatives = {
   },
   petersonAndMatz: {
     logoSrc: "petersonAndMatz.png",
-    logoHeight: "94px",
-    logoWidth: "460px",
-    location: "Michigan, Illinois, Wisconsin & Indiana",
+    logoHeight: "74px",
+    logoWidth: "400px",
+    location: "Michigan, Illinois, & Wisconsin",
     email: "cathy.piazza@petersonandmatz.com",
     phone: "847 - 844 - 4405",
     phonePrefill: "tel:8478444405",
