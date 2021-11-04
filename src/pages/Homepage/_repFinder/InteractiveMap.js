@@ -14,10 +14,12 @@ const MapContainer = styled.div`
   justify-content: center;
   margin: 30px 0px 90px 0px;
   filter: blur(${(props) => (props.mapIsOverlaid ? "2px" : "0")});
+  pointer-events: ${(props) => (props.mapIsOverlaid ? "none" : "auto")};
 `;
 
 const InteractionContainer = styled.div`
   position: relative;
+  width: 100%;
 `;
 
 export default class InteractiveMap extends Component {

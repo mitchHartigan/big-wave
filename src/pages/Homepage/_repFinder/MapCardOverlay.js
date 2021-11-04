@@ -4,9 +4,6 @@ import RepCard from "./RepCard";
 import { Representatives } from "./Representatives";
 
 export default function MapCardOverlay(props) {
-  const repData = props.repData;
-  console.log("repData", repData);
-
   return (
     <Container display={props.display}>
       <RepCard
@@ -21,8 +18,9 @@ export default function MapCardOverlay(props) {
 const Container = styled.div`
   position: absolute;
   display: ${(props) => (props.display ? "block" : "none")};
-  left: 308px;
+  left: 0;
   right: 0;
+  top: 130px;
   margin-left: auto;
   margin-right: auto;
   z-index: 10;

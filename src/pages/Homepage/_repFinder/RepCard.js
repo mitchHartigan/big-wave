@@ -17,34 +17,36 @@ export default function RepCard(props) {
   const { marginOverride, closable, handleCloseButton } = props;
 
   return (
-    <Container>
-      <CloseButton onClick={handleCloseButton} display={closable} />
-      <DetailsContainer>
-        <CenterBlock>
-          <RepLogo
-            src={`/repLogos/${logoSrc}`}
-            alt={logoAlt}
-            imgHeight={logoHeight}
-            imgWidth={logoWidth}
-            marginOverride={marginOverride}
-          />
-        </CenterBlock>
-        <Details>
-          <DetailIcon src="rep_location_icon.png" />
-          <LocationText>{location}</LocationText>
-        </Details>
-        <Details>
-          <DetailIcon src="rep_email_icon.png" />
-          <Email href={`mailto:${email}`} target="_blank">
-            {email}
-          </Email>
-        </Details>
-        <Details>
-          <DetailIcon src="rep_phone_icon.png" />
-          <PhoneNumber href={phonePrefill}>{phone}</PhoneNumber>
-        </Details>
-      </DetailsContainer>
-    </Container>
+    <CenterBlock>
+      <Container>
+        <CloseButton onClick={handleCloseButton} display={closable} />
+        <DetailsContainer>
+          <CenterBlock>
+            <RepLogo
+              src={`/repLogos/${logoSrc}`}
+              alt={logoAlt}
+              imgHeight={logoHeight}
+              imgWidth={logoWidth}
+              marginOverride={marginOverride}
+            />
+          </CenterBlock>
+          <Details>
+            <DetailIcon src="rep_location_icon.png" />
+            <LocationText>{location}</LocationText>
+          </Details>
+          <Details>
+            <DetailIcon src="rep_email_icon.png" />
+            <Email href={`mailto:${email}`} target="_blank">
+              {email}
+            </Email>
+          </Details>
+          <Details>
+            <DetailIcon src="rep_phone_icon.png" />
+            <PhoneNumber href={phonePrefill}>{phone}</PhoneNumber>
+          </Details>
+        </DetailsContainer>
+      </Container>
+    </CenterBlock>
   );
 }
 
