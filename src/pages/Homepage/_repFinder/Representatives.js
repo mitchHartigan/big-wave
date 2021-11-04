@@ -89,5 +89,22 @@ export const Representatives = {
     phone: "847 - 844 - 4405",
     phonePrefill: "tel:8478444405",
   },
-  hpThompson: {},
+  hpThompson: {
+    logoSrc: "hpThompson.png",
+    logoHeight: "192px",
+    logoWidth: "265px",
+    location: "Ohio, Indiana, Kentucky",
+    email: "nraymond@hpthompson.com",
+    phone: "317 - 576 - 6566",
+    phonePrefill: "tel:3175766566",
+  },
+  mc2: {
+    logoSrc: "mc2.png",
+    logoHeight: "108px",
+    logoWidth: "353px",
+    location: "Iowa, Nebraska, South Dakota, North Dakota & Minnesota",
+    email: "tomm@electricpump.com",
+    phone: "800 - 383 - 7867",
+    phonePrefill: "tel:8003837867",
+  },
 };
