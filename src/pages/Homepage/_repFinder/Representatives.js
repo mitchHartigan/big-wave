@@ -29,4 +29,14 @@ export const Representatives = {
     phone: "800 - 299 - 1148",
     phonePrefill: "tel:8002991148",
   },
+  haynes: {
+    logoSrc: "haynes.png",
+    logoHeight: "144px",
+    logoWidth: "254px",
+    logoAlt: "Haynes Equipment Logo",
+    location: "Arkansas & Oklahoma",
+    email: "tony@haynes-equipment.com",
+    phone: "913 - 782 - 4692",
+    phonePrefill: "tel:9137824692",
+  },
 };
