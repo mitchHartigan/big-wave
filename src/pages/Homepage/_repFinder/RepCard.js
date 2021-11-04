@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { CenterBlock } from "components/CenterBlock";
+import { CloseButton } from "./CloseButton";
 
 export default function RepCard(props) {
   const {
@@ -13,20 +14,21 @@ export default function RepCard(props) {
     phone,
     phonePrefill,
   } = props.repData;
-  const { marginOverride } = props;
+  const { marginOverride, closable, handleCloseButton } = props;
 
   return (
     <Container>
-      <CenterBlock>
-        <RepLogo
-          src={`/repLogos/${logoSrc}`}
-          alt={logoAlt}
-          imgHeight={logoHeight}
-          imgWidth={logoWidth}
-          marginOverride={marginOverride}
-        />
-      </CenterBlock>
+      <CloseButton onClick={handleCloseButton} display={closable} />
       <DetailsContainer>
+        <CenterBlock>
+          <RepLogo
+            src={`/repLogos/${logoSrc}`}
+            alt={logoAlt}
+            imgHeight={logoHeight}
+            imgWidth={logoWidth}
+            marginOverride={marginOverride}
+          />
+        </CenterBlock>
         <Details>
           <DetailIcon src="rep_location_icon.png" />
           <LocationText>{location}</LocationText>
@@ -54,6 +56,7 @@ const RepLogo = styled.img`
 `;
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 430px;

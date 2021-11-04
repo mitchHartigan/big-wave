@@ -30,9 +30,11 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const RepCardContainer = styled.div``;
+
 const RepCardRow = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 65%;
   justify-content: space-around;
 `;
