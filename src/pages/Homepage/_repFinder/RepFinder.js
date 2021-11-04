@@ -17,7 +17,20 @@ export default class RepFinder extends React.Component {
 
   render() {
     const { displayAllReps } = this.state;
-    const { coastalProcess, dAndHWaterSystems } = Representatives;
+    const {
+      coastalProcess,
+      dAndHWaterSystems,
+      macaulay,
+      haynes,
+      miscoInter,
+      miscoNorcal,
+      tmg,
+      tc,
+      pyrz,
+      petersonAndMatz,
+      hpThompson,
+      mc2,
+    } = Representatives;
 
     return (
       <Container>
@@ -39,6 +52,26 @@ export default class RepFinder extends React.Component {
               marginOverride="40px 0px 30px 0px"
             />
           </RepCardRow>
+          <RepCardRow>
+            <RepCard repData={macaulay} />
+            <RepCard repData={haynes} />
+          </RepCardRow>
+          <RepCardRow>
+            <RepCard repData={miscoInter} />
+            <RepCard repData={miscoNorcal} />
+          </RepCardRow>
+          <RepCardRow>
+            <RepCard repData={tmg} />
+            <RepCard repData={tc} />
+          </RepCardRow>
+          <RepCardRow>
+            <RepCard repData={pyrz} />
+            <RepCard repData={petersonAndMatz} />
+          </RepCardRow>
+          <RepCardRow>
+            <RepCard repData={hpThompson} />
+            <RepCard repData={mc2} />
+          </RepCardRow>
         </RepCardContainer>
       </Container>
     );
@@ -52,8 +85,9 @@ const Container = styled.div`
 
 const RepCardContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   display: ${(props) => (props.isVisible ? "flex" : "none")};
 `;
@@ -61,8 +95,9 @@ const RepCardContainer = styled.div`
 const RepCardRow = styled.div`
   display: flex;
   flex-direction: row;
-  width: 65%;
+  width: 60%;
   justify-content: space-around;
+  margin: 35px 0px 35px 0px;
 `;
 
 const Button = styled.button`
