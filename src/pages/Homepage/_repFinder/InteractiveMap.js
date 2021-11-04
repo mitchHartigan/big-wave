@@ -487,7 +487,7 @@ export default class InteractiveMap extends Component {
                 id="macaulay"
                 onMouseEnter={() => this._setRepAreaHovered("macaulay")}
                 onMouseLeave={() => this._setRepAreaUnhovered("macaulay")}
-                onClick={() => this._openRepCardOverlay("coastalProcess")}
+                onClick={() => this._openRepCardOverlay("macaulay")}
               >
                 <path
                   id="texas"
