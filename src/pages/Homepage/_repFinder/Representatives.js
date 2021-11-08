@@ -15,7 +15,7 @@ export const Representatives = {
     logoWidth: "425px",
     logoAlt: "D&H Water Systems Logo",
     location: "Southern California, Southern Nevada, Arizona & New Mexico",
-    email: "melanie@dandhwatersystems.net",
+    email: "melanie@dandhwatersystems.com",
     phone: "760 - 722 - 6893",
     phonePrefill: "tel:7607226893",
   },
