@@ -123,7 +123,6 @@ export default class InteractiveMap extends Component {
                   fill={dAndHWaterSystems ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path9"
                 />
                 <path
                   id="southernCalifornia"
@@ -131,7 +130,6 @@ export default class InteractiveMap extends Component {
                   fill={dAndHWaterSystems ? "#007FFF" : defaultColor}
                   stroke="#f5fafa"
                   mask="url(#path-5-inside-2_26:387)"
-                  id="path16"
                 />
                 <path
                   id="southernNevada"
@@ -139,7 +137,6 @@ export default class InteractiveMap extends Component {
                   fill={dAndHWaterSystems ? "#007FFF" : defaultColor}
                   stroke="#f5fafa"
                   stroke-width="0.5"
-                  id="path89-6"
                 />
                 <path
                   id="newMexico"
@@ -147,7 +144,6 @@ export default class InteractiveMap extends Component {
                   fill={dAndHWaterSystems ? "#007fff" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path95"
                 />
               </RepArea>
               <path
@@ -156,7 +152,6 @@ export default class InteractiveMap extends Component {
                 fill="#007FFF"
                 stroke="#F5FAFA"
                 stroke-width="0.5"
-                id="path11"
               />
               <mask id="path-5-inside-2_26:387" fill="white">
                 <path
@@ -177,7 +172,6 @@ export default class InteractiveMap extends Component {
                   fill={miscoNorcal ? "#007fff" : defaultColor}
                   stroke="#f5fafa"
                   mask="url(#path-5-inside-2_26:387-5)"
-                  id="path16-5"
                 />
                 <path
                   id="northernNevada"
@@ -185,7 +179,6 @@ export default class InteractiveMap extends Component {
                   fill={miscoNorcal ? "#007fff" : defaultColor}
                   stroke="#f5fafa"
                   stroke-width="0.5"
-                  id="path89"
                 />
               </RepArea>
               <path
@@ -241,7 +234,6 @@ export default class InteractiveMap extends Component {
                   fill={mc2 ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path42"
                 />
                 <path
                   id="nebraska"
@@ -249,7 +241,6 @@ export default class InteractiveMap extends Component {
                   fill={mc2 ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path87"
                 />
                 <path
                   id="southDakota"
@@ -257,7 +248,6 @@ export default class InteractiveMap extends Component {
                   fill={mc2 ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path121"
                 />
                 <path
                   id="northDakota"
@@ -265,7 +255,6 @@ export default class InteractiveMap extends Component {
                   fill={mc2 ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path107"
                 />
                 <path
                   id="minnesota"
@@ -273,7 +262,6 @@ export default class InteractiveMap extends Component {
                   fill={mc2 ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-23-inside-11_26:387)"
-                  id="path79"
                 />
               </RepArea>
               <path
@@ -349,7 +337,6 @@ export default class InteractiveMap extends Component {
                   fill={petersonAndMatz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-22-inside-10_26:387)"
-                  id="path74"
                 />
                 <path
                   id="illinois"
@@ -357,7 +344,6 @@ export default class InteractiveMap extends Component {
                   fill={petersonAndMatz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path38"
                 />
                 <path
                   id="wisconsin"
@@ -365,14 +351,12 @@ export default class InteractiveMap extends Component {
                   fill={petersonAndMatz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-49-inside-18_26:387)"
-                  id="path152"
                 />
               </RepArea>
               <mask id="path-23-inside-11_26:387" fill="white">
                 <path
                   id="minnesota"
                   d="M540.939 82.3662L539.618 85.7281L540.579 87.4091L540.219 93.5325L539.618 94.8533L542.859 105.779L544.419 108.781L545.259 125.591L546.46 128.832L545.98 135.796L549.46 144.681L549.82 151.645L549.7 154.167L549.58 156.808L548.5 159.209L544.779 161.491L544.419 162.932L546.46 165.933L546.94 168.094L550.06 168.815L551.861 171.096L551.621 218.523H585.467L629.035 217.442L651.359 216.602L650.039 211.199L649.799 207.597L647.158 203.995L643.797 203.154L637.556 198.832L636.836 194.869L629.275 191.147L629.035 189.586H625.074L622.433 186.465L620.033 184.904L620.873 178.78L619.793 176.859L620.393 170.376L621.593 168.214L621.233 164.973L619.793 163.412L617.633 163.052V161.01L620.993 154.047L628.075 149.364L627.594 133.755L628.675 134.235L629.395 133.635L629.515 132.314L630.595 131.594L632.275 133.035L633.115 132.915L631.675 130.273L636.836 126.551L640.557 122.109L642.477 121.148L648.118 114.064L655.68 107.1L660.36 104.579L667.922 101.337L677.043 95.9339L676.323 95.4536L671.883 96.2941L668.522 96.4141L667.322 94.4931L665.641 93.4125L653.879 94.8533L652.679 91.4914L650.759 91.3713L648.718 92.3318L644.277 96.0539H639.357L636.836 94.8533L636.476 92.8121L631.795 91.8516L631.075 89.9305L630.235 88.3696L629.035 89.4502L625.914 89.5703L614.032 82.9666H610.551L609.591 82.1261L605.87 83.687L604.91 85.2479L600.95 86.2084L599.389 85.9683V83.9271L598.549 82.8465H591.468L590.988 81.1656H587.867L586.547 81.6458L583.666 79.6047L584.027 77.9238L583.306 75.0421L582.466 73.7214L582.226 70.1194L581.026 66.3973L578.506 64.4762H575.025L575.145 74.0816L538.058 73.6013L540.939 82.3662Z"
-                  id="path76"
                 />
               </mask>
               <RepArea
@@ -387,7 +371,6 @@ export default class InteractiveMap extends Component {
                   fill={coastalProcess ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path81"
                 />
                 <path
                   id="louisiana"
@@ -395,7 +378,6 @@ export default class InteractiveMap extends Component {
                   fill={coastalProcess ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-18-inside-6_26:387)"
-                  id="path54"
                 />
               </RepArea>
 
@@ -411,7 +393,6 @@ export default class InteractiveMap extends Component {
                   fill={tmg ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path85"
                 />
                 <path
                   id="oregon"
@@ -419,7 +400,6 @@ export default class InteractiveMap extends Component {
                   fill={tmg ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path113"
                 />
                 <path
                   id="idaho"
@@ -427,7 +407,6 @@ export default class InteractiveMap extends Component {
                   fill={tmg ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path36"
                 />
                 <path
                   id="washington"
@@ -435,7 +414,6 @@ export default class InteractiveMap extends Component {
                   fill={tmg ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-47-inside-16_26:387)"
-                  id="path142"
                 />
                 <path
                   id="Alaska"
@@ -443,7 +421,6 @@ export default class InteractiveMap extends Component {
                   fill={tmg ? "#007fff" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-2-inside-1_26:387)"
-                  id="path7"
                 />
               </RepArea>
               <path
@@ -472,7 +449,6 @@ export default class InteractiveMap extends Component {
                   fill={pyrz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path93"
                 />
                 <path
                   id="pennsylvania"
@@ -480,7 +456,6 @@ export default class InteractiveMap extends Component {
                   fill={pyrz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path115"
                 />
                 <path
                   id="westVirginia"
@@ -488,7 +463,6 @@ export default class InteractiveMap extends Component {
                   fill={pyrz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-48-inside-17_26:387)"
-                  id="path147"
                 />
                 <path
                   id="newYork"
@@ -496,7 +470,6 @@ export default class InteractiveMap extends Component {
                   fill={pyrz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-32-inside-12_26:387)"
-                  id="path100"
                 />
                 <path
                   id="delaware"
@@ -504,7 +477,6 @@ export default class InteractiveMap extends Component {
                   fill={pyrz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path22"
                 />
                 <path
                   id="maryland"
@@ -512,7 +484,6 @@ export default class InteractiveMap extends Component {
                   fill={pyrz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-20-inside-8_26:387)"
-                  id="path64"
                 />
                 <path
                   id="virginia"
@@ -520,7 +491,6 @@ export default class InteractiveMap extends Component {
                   fill={pyrz ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-46-inside-15_26:387)"
-                  id="path137"
                 />
               </RepArea>
               <mask id="path-32-inside-12_26:387" fill="white">
@@ -555,7 +525,6 @@ export default class InteractiveMap extends Component {
                   fill={hpThompson ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path109"
                 />
                 <path
                   id="kentucky"
@@ -563,7 +532,6 @@ export default class InteractiveMap extends Component {
                   fill={hpThompson ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   mask="url(#path-17-inside-5_26:387)"
-                  id="path49"
                 />
                 <path
                   id="indiana"
@@ -571,7 +539,6 @@ export default class InteractiveMap extends Component {
                   fill={hpThompson ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path40"
                 />
               </RepArea>
               <RepArea
@@ -586,7 +553,6 @@ export default class InteractiveMap extends Component {
                   fill={haynes ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path111"
                 />
                 <path
                   id="arkansas"
@@ -594,7 +560,6 @@ export default class InteractiveMap extends Component {
                   fill={haynes ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path11"
                 />
               </RepArea>
               <path
@@ -637,7 +602,6 @@ export default class InteractiveMap extends Component {
                   stroke="#F5FAFA"
                   stroke-width="2"
                   mask="url(#path-43-inside-14_26:387)"
-                  id="path128"
                 />
               </RepArea>
               <RepArea
@@ -652,7 +616,6 @@ export default class InteractiveMap extends Component {
                   fill={tc ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path130"
                 />
               </RepArea>
               <path
@@ -699,7 +662,6 @@ export default class InteractiveMap extends Component {
                   fill={miscoInter ? "#007FFF" : defaultColor}
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path154"
                 />
                 <path
                   id="colorado"
@@ -708,7 +670,6 @@ export default class InteractiveMap extends Component {
                   stroke="#F5FAFA"
                   stroke="#F5FAFA"
                   stroke-width="0.5"
-                  id="path18"
                 />
               </RepArea>
             </g>
