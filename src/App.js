@@ -8,7 +8,9 @@ import Homepage from "./pages/Homepage/index";
 import { ChloramineBoostingSystem } from "pages/Chloramine Boosting System";
 import { TidalWaveMixer } from "./pages/Tidal Wave Mixer/index";
 import { CaseStudies } from "pages/Case Studies";
-import { Pomona } from "./pages/Pomona/index";
+import { Walnut } from "./pages/Walnut/index";
+import { August } from "./pages/August/index";
+import { March } from "./pages/March/index";
 
 export default function App() {
   return (
@@ -27,13 +29,17 @@ export default function App() {
             <ChloramineBoostingSystem />
           </Route>
 
-          {/* <Route path="/casestudies">
+          <Route path="/casestudies">
             <CaseStudies />
-          </Route> */}
-
-          <Route path="/pomona">
-            <Pomona />
           </Route>
+
+          <Route path="/walnut">
+            <Walnut />
+          </Route>
+
+          <Route path="/august" component={August} />
+
+          <Route path="/march" component={March} />
         </Switch>
       </Router>
     </ThemeProvider>

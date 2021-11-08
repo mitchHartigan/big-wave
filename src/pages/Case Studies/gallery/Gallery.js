@@ -4,26 +4,17 @@ import { Study } from "./_Study";
 
 const caseStudies = [
   {
-    title: "Pomona, CA",
-    backgroundImage: "study_thumbnail_pomona.png",
-    link: "pomona",
-  },
-
-  {
-    title: "Pomona, CA",
-    backgroundImage: "study_thumbnail_pomona.png",
-    link: "pomona",
-  },
-
-  {
-    title: "Pomona, CA",
-    backgroundImage: "study_thumbnail_pomona.png",
-    link: "pomona",
+    title: "May 2021",
+    backgroundImage: "study_hero_walnut.png",
+    link: "walnut",
   },
   {
-    title: "Pomona, CA",
-    backgroundImage: "study_thumbnail_pomona.png",
-    link: "pomona",
+    title: "August 2020",
+    link: "august",
+  },
+  {
+    title: "March 2021",
+    link: "march",
   },
 ];
 
@@ -45,6 +36,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: start;
   justify-content: space-around;
 
   @media (max-width: 1850px) {
