@@ -19,6 +19,16 @@ export const Representatives = {
     phone: "760 - 722 - 6893",
     phonePrefill: "tel:7607226893",
   },
+  bigWave: {
+    logoSrc: "bigWave.png",
+    logoHeight: "150px",
+    logoWidth: "306px",
+    logoAlt: "Big Wave Water Technologies logo",
+    location: "Contact us for more info.",
+    email: "kevin@bigwavewater.com",
+    phone: "760 - 717 - 2249",
+    phonePrefill: "tel:7607172249",
+  },
   macaulay: {
     logoSrc: "macaulay.png",
     logoHeight: "114px",
