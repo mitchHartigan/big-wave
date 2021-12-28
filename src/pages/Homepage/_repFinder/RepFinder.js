@@ -20,10 +20,10 @@ export default class RepFinder extends React.Component {
     const {
       coastalProcess,
       dAndHWaterSystems,
+      dAndHWaterSystemsNorcal,
       macaulay,
       haynes,
       miscoInter,
-      miscoNorcal,
       tmg,
       tc,
       pyrz,
@@ -54,9 +54,12 @@ export default class RepFinder extends React.Component {
         </CenterBlock>
         <RepCardContainer isVisible={displayAllReps}>
           <RepCardRow>
-            <RepCard repData={coastalProcess} />
             <RepCard
               repData={dAndHWaterSystems}
+              marginOverride="40px 0px 30px 0px"
+            />
+            <RepCard
+              repData={dAndHWaterSystemsNorcal}
               marginOverride="40px 0px 30px 0px"
             />
           </RepCardRow>
@@ -66,10 +69,7 @@ export default class RepFinder extends React.Component {
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={miscoInter} />
-            <RepCard
-              repData={miscoNorcal}
-              marginOverride="10px 0px -10px 0px"
-            />
+            <RepCard repData={coastalProcess} />
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={tmg} />

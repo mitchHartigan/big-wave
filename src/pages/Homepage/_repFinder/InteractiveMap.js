@@ -62,6 +62,7 @@ export default class InteractiveMap extends Component {
     const {
       coastalProcess,
       dAndHWaterSystems,
+      dAndHWaterSystemsNorcal,
       macaulay,
       haynes,
       miscoInter,
@@ -166,15 +167,21 @@ export default class InteractiveMap extends Component {
               </mask>
 
               <RepArea
-                id="miscoNorcal"
-                onMouseEnter={() => this._setRepAreaHovered("miscoNorcal")}
-                onMouseLeave={() => this._setRepAreaUnhovered("miscoNorcal")}
-                onClick={() => this._openRepCardOverlay("miscoNorcal")}
+                id="dAndHWaterSystemsNorcal"
+                onMouseEnter={() =>
+                  this._setRepAreaHovered("dAndHWaterSystemsNorcal")
+                }
+                onMouseLeave={() =>
+                  this._setRepAreaUnhovered("dAndHWaterSystemsNorcal")
+                }
+                onClick={() =>
+                  this._openRepCardOverlay("dAndHWaterSystemsNorcal")
+                }
               >
                 <path
                   id="northernCalifornia"
                   d="m 35.2864,371.849 -8.0414,-15.729 -0.4801,-3.602 -1.9204,-2.762 0.2401,-3.001 -2.4005,-6.004 -3.4806,-3.241 0.7201,-8.525 2.8806,-0.961 2.1604,-3.722 -0.4801,-3.842 -1.2003,-1.081 h -3.0005 l -3.0005,-3.962 -1.8004,-4.202 v -9.005 l 1.4403,-5.043 0.24,-2.522 3.0006,0.241 -0.12,1.921 -0.9602,0.84 v 3.002 l 4.4408,3.842 v -5.643 l -1.6803,-4.082 0.6001,-1.321 -1.2002,-2.041 3.3606,-1.801 -2.2804,-3.602 -1.6803,0.6 -1.8004,4.563 0.6001,1.56 -0.9601,1.201 -1.0802,-0.12 -6.4812,-7.324 0.8401,-6.724 -1.3202,-4.683 -7.80142,-15.368 0.96018,-12.847 2.7605,-4.323 L 6.6012,234.852 0,221.524 l 0.360066,-6.243 8.281514,-9.005 2.04032,-2.882 -0.12,-1.681 4.8009,-11.046 0.12,-10.086 1.0802,-3.001 79.3345,22.332 -19.6836,75.763 1.3202,4.202 51.45827,76.77763 z"
-                  fill={miscoNorcal ? "#007fff" : defaultColor}
+                  fill={dAndHWaterSystemsNorcal ? "#007fff" : defaultColor}
                   stroke="#f5fafa"
                   mask="url(#path-5-inside-2_26:387-5)"
                   id="path16-5"
@@ -182,7 +189,7 @@ export default class InteractiveMap extends Component {
                 <path
                   id="northernNevada"
                   d="M 129.40043,356.81561 77.7618,279.768 l -1.2879,-4.1 19.6039,-75.456 56.1722,13.391 0.004,0.001 29.285,6.484 h 0.005 l 27.722,5.595 -25.158,130.629 v 10e-4 z"
-                  fill={miscoNorcal ? "#007fff" : defaultColor}
+                  fill={dAndHWaterSystemsNorcal ? "#007fff" : defaultColor}
                   stroke="#f5fafa"
                   stroke-width="0.5"
                   id="path89"
