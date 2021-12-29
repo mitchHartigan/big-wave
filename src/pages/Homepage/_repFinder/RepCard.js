@@ -3,6 +3,12 @@ import styled from "styled-components";
 import { CenterBlock } from "components/CenterBlock";
 import { CloseButton } from "./CloseButton";
 
+/* 
+  Small ~400x400 white card with a rep logo and contact information. Displayed
+  either over the map when a service area is clicked, or in a grid beneath the map.
+  Takes rep data from Representatives.js as props.
+*/
+
 export default function RepCard(props) {
   const {
     logoSrc,
