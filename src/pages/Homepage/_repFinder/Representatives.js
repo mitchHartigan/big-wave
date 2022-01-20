@@ -35,7 +35,7 @@ export const Representatives = {
     logoWidth: "306px",
     logoAlt: "Big Wave Water Technologies logo",
     location: "Contact us for more info.",
-    email: "kevin@bigwavewater.c.om",
+    email: "kevin@bigwavewater.com",
     phone: "760 - 717 - 2249",
     phonePrefill: "tel:7607172249",
   },
