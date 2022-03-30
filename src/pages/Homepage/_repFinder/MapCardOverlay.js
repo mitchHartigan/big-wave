@@ -4,6 +4,20 @@ import RepCard from "./RepCard";
 import { Representatives } from "./Representatives";
 
 export default function MapCardOverlay(props) {
+  if (props.repData === "waterStorageSolutions") {
+    return (
+      <Container display={props.display}>
+        <RepCard
+          repData={Representatives[props.repData]}
+          closable
+          handleCloseButton={props.handleCloseButton}
+          smallDescription
+          marginOverride="20px 0px 0px 10px"
+        />
+      </Container>
+    );
+  }
+
   return (
     <Container display={props.display}>
       <RepCard

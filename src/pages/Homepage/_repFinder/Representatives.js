@@ -127,4 +127,14 @@ export const Representatives = {
     phone: "800 - 383 - 7867",
     phonePrefill: "tel:8003837867",
   },
+  waterStorageSolutions: {
+    logoSrc: "waterStorageSolutions.png",
+    logoWidth: "270px",
+    logoHeight: "108px",
+    location:
+      "Connecticut, Maine, Massachusetts, New Hampshire, New York (excluding New York, Kings, Bronx, Richmond, and Queens counties), Rhode Island, and Vermont.",
+    email: "Emcquaide@waterstoragesolutionsllc.com",
+    phone: "774 - 275 - 9515",
+    phonePrefill: "tel:7742759515",
+  },
 };

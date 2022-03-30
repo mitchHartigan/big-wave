@@ -20,7 +20,12 @@ export default function RepCard(props) {
     phone,
     phonePrefill,
   } = props.repData;
-  const { marginOverride, closable, handleCloseButton } = props;
+  const {
+    marginOverride,
+    closable,
+    handleCloseButton,
+    smallDescription,
+  } = props;
 
   return (
     <CenterBlock>
@@ -38,17 +43,28 @@ export default function RepCard(props) {
           </CenterBlock>
           <Details>
             <DetailIcon src="rep_location_icon.png" />
-            <LocationText>{location}</LocationText>
+            <LocationText smallDescription={smallDescription}>
+              {location}
+            </LocationText>
           </Details>
           <Details>
             <DetailIcon src="rep_email_icon.png" />
-            <Email href={`mailto:${email}`} target="_blank">
+            <Email
+              smallDescription={smallDescription}
+              href={`mailto:${email}`}
+              target="_blank"
+            >
               {email}
             </Email>
           </Details>
           <Details>
             <DetailIcon src="rep_phone_icon.png" />
-            <PhoneNumber href={phonePrefill}>{phone}</PhoneNumber>
+            <PhoneNumber
+              smallDescription={smallDescription}
+              href={phonePrefill}
+            >
+              {phone}
+            </PhoneNumber>
           </Details>
         </DetailsContainer>
       </Container>
@@ -107,7 +123,8 @@ const LocationText = styled.p`
   margin-bottom: -2px;
   align-self: end;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text.sm};
+  font-size: ${(props) =>
+    props.smallDescription ? props.theme.text.xxs : props.theme.text.xs};
   text-align: left;
   color: ${(props) => props.theme.colors.darkBlue};
   width: 100%;
@@ -124,7 +141,8 @@ const Email = styled.a`
   text-decoration: none;
   margin: 0px;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text.sm};
+  font-size: ${(props) =>
+    props.smallDescription ? props.theme.text.xs : props.theme.text.sm};
   text-align: left;
   color: ${(props) => props.theme.colors.mainBlue};
   width: 100%;
@@ -141,7 +159,8 @@ const PhoneNumber = styled.a`
   text-decoration: none;
   margin: 0px;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.text.sm};
+  font-size: ${(props) =>
+    props.smallDescription ? props.theme.text.xs : props.theme.text.sm};
   text-align: left;
   color: ${(props) => props.theme.colors.mainBlue};
   width: 100%;
