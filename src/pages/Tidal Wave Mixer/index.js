@@ -37,7 +37,7 @@ const feature1 = {
   descriptionText: `
   The unique active mixing process of the Tidal Wave
   Mixer will swiftly disintegrate stagnated water layers
-  and minimize the thermal stratification and thermocycline
+  and minimize the thermal stratification and thermocline
   formation. The process will circulate colder water up into
   the storage tank in order to maintain consistent water
   temperature.
@@ -55,9 +55,8 @@ const feature2 = {
   NSF/ANSI 372) and has obtained industry-leading certifications.
   This powerful active water mixer is designed for use in drinking
   water storage tanks of multiple capacities. It features a robust
-  stainless steel body that ensures superior resilience, and it comes
-  with advanced safety features.
-  `,
+  High Density Poly Ethelene (HDPE) that ensures superior resilience,
+  and it comes with advances safety features.`,
   linkDescription: "Download and ",
   link: "view our NSF/ANSI certification here.",
   href: "Mixer_ULCert.pdf",
