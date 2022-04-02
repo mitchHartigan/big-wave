@@ -63,9 +63,6 @@ export class TechnicalSpecs extends React.Component {
             <Spec name="Wiring:">
               NSF 61 & UL-listed submersible pump cable
             </Spec>
-            <Spec name="Installation Equipment:">
-              316 Stainless Steel Chain
-            </Spec>
             <DownloadButton href="spec_TidalWaveMixer.docx" target="_blank">
               Download the full Tidal Wave Mixer Specifications (.docx).
             </DownloadButton>
