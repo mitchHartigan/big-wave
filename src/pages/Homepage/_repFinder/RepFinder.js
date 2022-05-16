@@ -22,7 +22,6 @@ export default class RepFinder extends React.Component {
       dAndHWaterSystems,
       dAndHWaterSystemsNorcal,
       macaulay,
-      haynes,
       miscoInter,
       tmg,
       tc,
@@ -66,7 +65,6 @@ export default class RepFinder extends React.Component {
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={macaulay} />
-            <RepCard repData={haynes} />
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={miscoInter} />
