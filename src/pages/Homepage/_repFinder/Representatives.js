@@ -79,17 +79,6 @@ export const Representatives = {
     phone: "801 - 201 - 3121",
     phonePrefill: "tel:8012013121",
   },
-  pyrz: {
-    logoSrc: "pyrz.png",
-    logoHeight: "103px",
-    logoWidth: "365px",
-    logoAlt: "PYRZ Water Supply Logo",
-    location:
-      "Pennsylvania, West Virginia, New York, New Jersey, Delaware, Maryland & Virginia",
-    email: "sales@pyrzwater.com",
-    phone: "215 - 256 - 8430",
-    phonePrefill: "tel:2152568430",
-  },
   petersonAndMatz: {
     logoSrc: "petersonAndMatz.png",
     logoHeight: "74px",
@@ -98,6 +87,15 @@ export const Representatives = {
     email: "cathy.piazza@petersonandmatz.com",
     phone: "847 - 844 - 4405",
     phonePrefill: "tel:8478444405",
+  },
+  sos: {
+    logoSrc: "sos.png",
+    logoHeight: "118px",
+    logoWidth: "242px",
+    location: "Tennessee",
+    email: "jkbrownfield@gmail.com",
+    phone: "423 - 618 - 8848",
+    phonePrefill: "tel:4236188848",
   },
   hpThompson: {
     logoSrc: "hpThompson.png",
