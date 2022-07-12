@@ -66,8 +66,8 @@ export const Representatives = {
     logoAlt: "TMG Services Logo",
     location: "Oregon, Washington, Idaho, Montana & Alaska",
     email: "tmg@tmgservices.net",
-    phone: "800 - 562 - 2130",
-    phonePrefill: "tel:8005622130",
+    phone: "253 - 779 - 4160",
+    phonePrefill: "tel:2537794160",
   },
   tc: {
     logoSrc: "tc.png",
