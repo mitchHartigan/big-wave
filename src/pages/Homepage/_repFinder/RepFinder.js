@@ -22,11 +22,10 @@ export default class RepFinder extends React.Component {
       dAndHWaterSystems,
       dAndHWaterSystemsNorcal,
       macaulay,
-      haynes,
       miscoInter,
       tmg,
+      sos,
       tc,
-      pyrz,
       petersonAndMatz,
       hpThompson,
       mc2,
@@ -66,7 +65,7 @@ export default class RepFinder extends React.Component {
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={macaulay} />
-            <RepCard repData={haynes} />
+            <RepCard repData={petersonAndMatz} />
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={miscoInter} />
@@ -75,10 +74,6 @@ export default class RepFinder extends React.Component {
           <RepCardRow>
             <RepCard repData={tmg} />
             <RepCard repData={tc} marginOverride="-10px 0px -10px 0px" />
-          </RepCardRow>
-          <RepCardRow>
-            <RepCard repData={pyrz} />
-            <RepCard repData={petersonAndMatz} />
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={hpThompson} />
@@ -90,6 +85,7 @@ export default class RepFinder extends React.Component {
               smallDescription
               marginOverride="20px 0px 0px 10px"
             />
+            <RepCard repData={sos} />
           </RepCardRow>
         </RepCardContainer>
       </Container>
