@@ -18,7 +18,7 @@ export default class RepFinder extends React.Component {
   render() {
     const { displayAllReps } = this.state;
     const {
-      coastalProcess,
+      pipeTech,
       dAndHWaterSystems,
       dAndHWaterSystemsNorcal,
       macaulay,
@@ -69,7 +69,7 @@ export default class RepFinder extends React.Component {
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={miscoInter} />
-            <RepCard repData={coastalProcess} />
+            <RepCard repData={pipeTech} />
           </RepCardRow>
           <RepCardRow>
             <RepCard repData={tmg} />

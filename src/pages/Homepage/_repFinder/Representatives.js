@@ -1,13 +1,13 @@
 export const Representatives = {
-  coastalProcess: {
-    logoSrc: "coastalProcess.png",
+  pipeTech: {
+    logoSrc: "pipeTech.png",
     logoHeight: "161px",
     logoWidth: "337px",
-    logoAlt: "Coastal Process Logo",
+    logoAlt: "Pipe Tech Logo",
     location: "Louisiana & Mississippi",
-    email: "info@coastalprocess.net",
-    phone: "225 - 567 - 3120",
-    phonePrefill: "tel:2255673120",
+    email: "frankiv@pipetechinc.com",
+    phone: "985 - 807 - 8898",
+    phonePrefill: "tel:9858078898",
   },
   dAndHWaterSystems: {
     logoSrc: "dAndHWaterSystems.png",
