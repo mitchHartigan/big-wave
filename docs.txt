@@ -1,3 +1,1 @@
-TODO:
-- block off Case Studies section.
-- Make sure email is still working, and point it at the D&H server.
+Note: This currently requires node v16 to run!

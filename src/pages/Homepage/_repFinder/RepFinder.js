@@ -30,6 +30,7 @@ export default class RepFinder extends React.Component {
       hpThompson,
       mc2,
       waterStorageSolutions,
+      cl2Solutions,
     } = Representatives;
 
     return (
@@ -86,6 +87,9 @@ export default class RepFinder extends React.Component {
               marginOverride="20px 0px 0px 10px"
             />
             <RepCard repData={sos} />
+          </RepCardRow>
+          <RepCardRow>
+            <RepCard repData={cl2Solutions} />
           </RepCardRow>
         </RepCardContainer>
       </Container>

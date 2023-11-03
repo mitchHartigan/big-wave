@@ -83,7 +83,7 @@ export const Representatives = {
     logoSrc: "petersonAndMatz.png",
     logoHeight: "74px",
     logoWidth: "400px",
-    location: "Michigan, Illinois, Indiana & Wisconsin",
+    location: "Michigan, Illinois & Wisconsin",
     email: "cathy.piazza@petersonandmatz.com",
     phone: "847 - 844 - 4405",
     phonePrefill: "tel:8478444405",
@@ -124,5 +124,14 @@ export const Representatives = {
     email: "Emcquaide@waterstoragesolutionsllc.com",
     phone: "774 - 275 - 9515",
     phonePrefill: "tel:7742759515",
+  },
+  cl2Solutions: {
+    logoSrc: "cl2Solutions.png",
+    logoWidth: "400px",
+    logoHeight: "153px",
+    location: "Florida & Georgia",
+    email: "jason@CL2solutions.com",
+    phone: "813 - 629 - 2720",
+    phonePrefill: "tel:8136292720",
   },
 };
