@@ -42,6 +42,9 @@ export class TechnicalSpecs extends React.Component {
             <Spec name="Height:">30.75” (78.10 cm) + 10" (25.4cm) handle</Spec>
             <Spec name="Weight:">35 lbs. (15.87 kg)</Spec>
             <Spec name="Stand Material:">HDPE</Spec>
+            <DownloadButton href="models_TidalWaveMixer.docx">
+              View our different Tidal Wave Mixer models (.docx)
+            </DownloadButton>
             <DownloadButton href="spec_TidalWaveMixer.docx" target="_blank">
               Download the full Tidal Wave Mixer Specifications (.docx).
             </DownloadButton>
@@ -58,7 +61,7 @@ const TitleStylesOverride = {
 
 const DownloadButton = styled.a`
   padding: 10px 30px 10px 30px;
-  margin: 6vh 0vw 2vh 0vw;
+  margin: 2vh 0vw 2vh 0vw;
   background-color: ${(props) => props.theme.colors.mainBlue};
   color: white;
   font-family: ${(props) => props.theme.font};
